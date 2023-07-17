@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://azlinux.github.io/rss.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://azlinux.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>AZLinux</title>
+    <link>https://azlinux.github.io/</link>
+    <description>Distribución Linux del Ayuntamiento de Zaragoza para los empleados municipales</description>
+    <language>es-ES</language>
+    <pubDate>Mon, 17 Jul 2023 11:27:29 GMT</pubDate>
+    <lastBuildDate>Mon, 17 Jul 2023 11:27:29 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed2</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>Seguridad</category>
+    <category>Impresión</category>
+    <category>Presentación</category>
+    <category>Hardware</category>
+    <category>Desktop</category>
+    <category>Documentación</category>
+    <category>Otros</category>
+    <category>Evolución</category>
+    <category>Dificultades</category>
+    <item>
+      <title>Cómo hemos segurizado GRUB</title>
+      <link>https://azlinux.github.io/posts/2009-08-19-como-hemos-segurizado-grub.html</link>
+      <guid>https://azlinux.github.io/posts/2009-08-19-como-hemos-segurizado-grub.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Cómo hemos segurizado GRUB</source>
+      <description>GRUB es el gestor de arranque que utilizamos en AZLinux.</description>
+      <category>Seguridad</category>
+      <pubDate>Wed, 19 Aug 2009 08:43:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p><a href="http://es.wikipedia.org/wiki/GNU_GRUB" target="_blank" rel="noopener noreferrer">GRUB</a> es el gestor de arranque que utilizamos en AZLinux.</p>
+<!-- more -->
+<p>Es relativamente sencillo utilizarlo para entrar al sistema con permisos de root (acción que no permitimos a nuestros usuarios). Basta con editar la entrada y añadir <code>init=/bin/bash</code>.</p>
+<p>GRUB permite ser protegido mediante contraseña.</p>
+<h2> Método gráfico</h2>
+<p>Usando <a href="http://es.wikipedia.org/wiki/YaST" target="_blank" rel="noopener noreferrer">YAST</a> (herramienta de administración del sistema de SUSE).</p>
+<div style="text-align:center">
+<p><img src="/img/grub.jpg" alt="Configuración de GRUB en YAST" title="Configuración de GRUB en YAST"></p>
+</div>
+<h2> Método comando</h2>
+<ul>
+<li>Como root, ejecutar comando <code>grub</code>.</li>
+<li>Generar una clave válida:<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>Añadir al fichero <code>/boot/grub/menu.lst</code>:<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+</ul>
+<p>A partir de este momento, GRUB solo puede ser editado conociendo la clave.</p>
+<p>Como siempre esperamos vuestras aportaciones y comentarios.</p>
+]]></content:encoded>
+      <enclosure url="https://azlinux.github.io/img/grub.jpg &apos;Configuración de GRUB en YAST&apos;" type="image/"/>
+    </item>
+    <item>
+      <title>Cómo hemos traducido drivers de impresoras</title>
+      <link>https://azlinux.github.io/posts/2009-08-19-como-hemos-traducido-drivers-impresoras.html</link>
+      <guid>https://azlinux.github.io/posts/2009-08-19-como-hemos-traducido-drivers-impresoras.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Cómo hemos traducido drivers de impresoras</source>
+      <description>La definición de las impresoras en AZLinux (como cualquier otro GNU/Linux), se realiza mediante ficheros PPD. Cada PPD (archivos de descripción de impresoras PostScript®) define las características de la impresora.</description>
+      <category>Impresión</category>
+      <pubDate>Wed, 19 Aug 2009 09:19:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>La definición de las impresoras en AZLinux (como cualquier otro GNU/Linux), se realiza mediante ficheros PPD.</p>
+<p>Cada PPD (archivos de descripción de impresoras PostScript®) define las características de la impresora.</p>
+<!-- more -->
+<p>Es relativamente fácil encontrar el fichero PPD para tu modelo de impresora (<code>/usr/share/cups/model</code> o en <a href="http://openprinting.org/printer_list.cgi" target="_blank" rel="noopener noreferrer">openprinting.org</a>), pero casi todos en perfecto inglés. Por lo tanto o el usuario aprende que es <em>long edge</em>, <em>duplex unit</em>, <em>fit to page</em> y unos 70 términos más o le traducimos los <em>drivers</em>.</p>
+<p>Después de muchas investigaciones sobre traducción de <em>drivers</em> de impresoras llegamos a la conclusión de que no hay software ni procesos automatizados para traducir ficheros PPD. (Gran decepción)</p>
+<p>Por tanto los traducimos nosotros mismos editando cada PPD siguiendo estas pequeñas reglas:</p>
+<ul>
+<li>Cambiar definición del lenguaje del ppd: <code>*LanguageVersion: Spanish</code></li>
+<li>Buscar las opciones de impresora: entre <code>*OpenUI</code> y <code>*CloseUI</code>.</li>
+<li>Buscar las parejas de términos: Inglés/Español en los nombres de opciones y valores.</li>
+</ul>
+<div class="hint-container info">
+<p class="hint-container-title">Ejemplo</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<p>Como siempre, esperamos vuestras aportaciones y comentarios.</p>
+<h2> Enlaces</h2>
+<ul>
+<li><a href="/files/diccionario.txt">Nuestro diccionario particular</a>.</li>
+<li><a href="http://partners.adobe.com/public/developer/en/ps/5003.PPD_Spec_v4.3.pdf" target="_blank" rel="noopener noreferrer">PostScript ® Printer Description File Format Specification Version 4.3 (PPD Spec 4.3)</a>.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Nace el blog de AZLinux</title>
+      <link>https://azlinux.github.io/posts/2009-08-19-nace-blog-azlinux.html</link>
+      <guid>https://azlinux.github.io/posts/2009-08-19-nace-blog-azlinux.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Nace el blog de AZLinux</source>
+      <description>AZLinux es la distribución GNU/Linux que hemos preparado en el Ayuntamiento de Zaragoza (España).</description>
+      <category>Presentación</category>
+      <pubDate>Wed, 19 Aug 2009 07:34:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>AZLinux es la distribución GNU/Linux que hemos preparado en el Ayuntamiento de Zaragoza (España).</p>
+<!-- more -->
+<p>Llevamos trabajando unos 3 años y nuestro objetivo es sustituir el actual sistema operativo Microsoft Windows XP por GNU/Linux en los puestos de trabajo de los funcionarios (sobre 2800 pcs). Nuestra distribución esta basada en SuSe Linux Enterprise Desktop 10 de Novell con GNOME y OpenOffice como paquete ofimático.</p>
+<p>Hemos avanzado bastante en este tiempo sin hacer mucho ruido y ya tenemos un importante conjunto de puestos migrados. Hemos tenido, tenemos y tendremos dificultades de todo tipo, pero las personas que forman el equipo de AZLinux son excelentes técnicos y, como buenos aragoneses, bastante "cabezudicos".</p>
+<p>En breves fechas realizaremos una presentacion mas formal de nuestro proyecto de software libre con muchos más datos, pero hoy desde este blog queremos iniciar nuestra andadura en la web. <strong>Publicaremos pequeños documentos técnicos donde describiremos como hemos configurado nuestro sistema y confiamos en que participéis con vuestras opiniones y sugerencias.</strong></p>
+<p>Gracias a todos los que se han implicado con AZLinux.</p>
+<h2> Enlaces</h2>
+<ul>
+<li>
+<p><a href="https://www.europapress.es/aragon/innova-00241/noticia-innova-ayuntamiento-zaragoza-ahorrara-cada-ano-cerca-millon-euros-debido-software-libre-20070222144226.html" target="_blank" rel="noopener noreferrer">El Ayuntamiento ahorrará cada año cerca de un millón de euros debido al software libre</a>.</p>
+</li>
+<li>
+<p><a href="http://hispalinux.es/node/611" target="_blank" rel="noopener noreferrer">El Ayuntamiento de Zaragoza usa Software Libre en el consistorio</a>.</p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Cómo utilizamos los scanners</title>
+      <link>https://azlinux.github.io/posts/2009-08-20-como-utilizamos-los-scanners.html</link>
+      <guid>https://azlinux.github.io/posts/2009-08-20-como-utilizamos-los-scanners.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Cómo utilizamos los scanners</source>
+      <description>SANE Scanner Access Now Easy (SANE) es una interfaz de programación de aplicaciones (API) que proporciona acceso estandarizado a cualquier dispositivo de escaneo (escáner de sobremesa, escáner de mano, cámaras y videocámaras, etc.). El API de SANE es de dominio público y su discusión y desarrollo está abierto a todo el mundo.</description>
+      <category>Hardware</category>
+      <pubDate>Thu, 20 Aug 2009 11:21:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> SANE</h2>
+<p><a href="http://es.wikipedia.org/wiki/Scanner_Access_Now_Easy" target="_blank" rel="noopener noreferrer">Scanner Access Now Easy (SANE)</a> es una interfaz de programación de aplicaciones (API) que proporciona acceso estandarizado a cualquier dispositivo de escaneo (escáner de sobremesa, escáner de mano, cámaras y videocámaras, etc.). El API de SANE es de dominio público y su discusión y desarrollo está abierto a todo el mundo.</p>
+<!-- more -->
+<h2> Estructura</h2>
+<div style="text-align:center">
+<p><img src="/img/sane-net.png" alt="Estructura de SANE" title="Estructura de SANE"></p>
+</div>
+<h3> Backends de SANE (cajas verdes)</h3>
+<div class="hint-container info">
+<p class="hint-container-title">Información</p>
+<p>Directorio <code>/etc/sane.d</code>.</p>
+</div>
+<p>Los <em>backends</em> son los controladores que implementan las funciones que proporciona la capa de abstracción de SANE para la comunicación de las aplicaciones de usuario con los diferentes dispositivos de escaneo soportados. Cada <em>backend</em> puede soportar uno o varios dispositivos ya que, en realidad, lo que el <em>backend</em> implementa es el protocolo de comunicación con el <em>chipset</em> del dispositivo, el cual puede estar integrado en varios escáneres.</p>
+<p><a href="http://www.sane-project.org/sane-supported-devices.html" target="_blank" rel="noopener noreferrer">Existen muchos <em>backends</em></a> dentro del paquete <code>saned</code> o <code>saned-backends</code> pero también existen backends externos que hay que añadir manualmente en cada caso (p.e. EPSON Perfection V10).</p>
+<h3> Interfaz DLL (caja azul)</h3>
+<div class="hint-container info">
+<p class="hint-container-title">Información</p>
+<p>Fichero <code>/etc/sane.d/dll.conf</code>.</p>
+</div>
+<p>Por encima de los <em>backends</em> se encuentra la interfaz <em>dll</em>, una librería de enlace dinámico que puede entenderse como un <em>backend</em> más, ya que implementa las mismas funciones que estos pero proporciona la posibilidad de utilizar más de un <em>backend</em>.</p>
+<p>Para hacer uso de los <em>backends</em>, estos han de estar registrados. Para ello, debe existir la entrada correspondiente en el archivo <code>dll.conf</code> localizado en el directorio <code>sane.d</code>.</p>
+<h3> Frontends de SANE</h3>
+<div class="hint-container info">
+<p class="hint-container-title">Información</p>
+<p>Intefaz gráfica del usuario final.</p>
+</div>
+<p>Los <em>frontends</em> son aplicaciones que hacen uso de la capa de abstracción proporcionada por SANE para acceder a los dispositivos de escaneo. Estos programas no tienen por qué conocer el funcionamiento interno de cada dispositivo ya que de ese trabajo se encargan los <em>backends</em>.</p>
+<p>Algunos ejemplos de <em>frontends</em> conocidos son:</p>
+<ul>
+<li><strong>scanimage</strong>: Aplicación para consola (modo texto).</li>
+<li><strong>xscanimage</strong>: Versión para X11.</li>
+<li><a href="http://es.wikipedia.org/wiki/Xsane" target="_blank" rel="noopener noreferrer">Xsane</a>: Versión para GTK+.</li>
+<li><a href="http://es.wikipedia.org/wiki/Kooka" target="_blank" rel="noopener noreferrer">kooka</a>: Aplicación para entornos KDE.</li>
+</ul>
+<h2> Ejemplo práctico y herramientas de diagnóstico</h2>
+<p>Proceso de instalación del escáner <strong>HP 3500c</strong>.</p>
+<ul>
+<li><a href="http://www.sane-project.org/sane-mfgs.html" target="_blank" rel="noopener noreferrer">Buscamos el escáner</a>.
+<ul>
+<li>Está incluido en el paquete <code>sane-backends 1.0.19</code>.</li>
+<li>Nuestro SLED tiene el paquete <code>1.0.17</code> (actualizo a <code>1.0.19</code>).</li>
+</ul>
+</li>
+<li>Activo <em>backend</em> en <code>/etc/sane.d/dll.conf</code>: busco línea <code>hp3500</code> y descomento.<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>Diagnóstico antes de escanear:
+<ul>
+<li><code>lsusb</code>: chequea puerto para scanner usb (debe detectarlo)<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+<li><code>sane-find-scanner</code>: es una aplicación incluida en el proyecto SANE cuyo propósito es buscar y detectar aquellos dispositivos del sistema que pudieran ser soportados por alguno de los <em>backends</em>.</li>
+<li><code>scanimage -L</code>: el <em>frontend</em> <code>scanimage</code> muestra los dispositivos compatibles localizados por los <code>backends</code> activados en el archivo <code>dll.conf</code>.</li>
+</ul>
+</li>
+<li>Lanzar <strong>XSANE</strong>: arranca la interfaz gráfica para poder escanear.</li>
+<li>Adquirir imagen desde las aplicaciones:
+<ul>
+<li>GIMP: Adquirir imagen</li>
+<li>OpenOffice: Insertar &gt; Imagen &gt; Escanear &gt; Seleccionar fuente</li>
+</ul>
+</li>
+</ul>
+<h2> Escanear en red</h2>
+<h3> Equipo servidor</h3>
+<ul>
+<li>Configurar escáner en local (probar)</li>
+<li>Habilitar acceso desde la red (<code>/etc/sane.d/saned.conf</code>)</li>
+<li>Configurar el servicio <code>saned</code> y <code>xinetd</code>:
+<ul>
+<li>Crear fichero <code>/etc/xintetd.d/saned</code><div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>Ajustar archivo <code>/etc/services</code><div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+<li>Reiniciar <code>xinetd</code><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+<li>Comprobación<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ul>
+</li>
+</ul>
+<h3> Equipo cliente</h3>
+<ul>
+<li>Activar <em>backend</em> <code>net</code>: editar <code>dll.conf</code> y descomentar <code>net</code>.</li>
+<li>Configurar <code>/etc/sane.d/net.conf</code>: añadir IP del servidor del escáner.</li>
+<li>Comprobación (¡cuidado con el <em>firewall</em>!):<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>Lanzar <strong>XSANE</strong>.</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://azlinux.github.io/img/sane-net.png &apos;Estructura de SANE&apos;" type="image/"/>
+    </item>
+    <item>
+      <title>Cómo asociamos ficheros con aplicaciones</title>
+      <link>https://azlinux.github.io/posts/2009-08-25-como-asociamos-ficheros-con-aplicaciones.html</link>
+      <guid>https://azlinux.github.io/posts/2009-08-25-como-asociamos-ficheros-con-aplicaciones.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Cómo asociamos ficheros con aplicaciones</source>
+      <description>Entendiendo XDG Base Directory Specification. Forma parte del estándar freedesktop.org. Define uno o más directorios base donde los ficheros deben ser buscados.</description>
+      <category>Desktop</category>
+      <pubDate>Tue, 25 Aug 2009 13:52:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Entendiendo <a href="https://specifications.freedesktop.org/basedir-spec/latest/" target="_blank" rel="noopener noreferrer">XDG Base Directory Specification</a>. Forma parte del estándar <a href="https://www.freedesktop.org/" target="_blank" rel="noopener noreferrer">freedesktop.org</a>. Define uno o más directorios base donde los ficheros deben ser buscados.</p>
+<!-- more -->
+<p>Orden de búsqueda:</p>
+<ol>
+<li><code>$XDG_DATA_HOME</code> (en su defecto: <code>~/.local/share</code>)</li>
+<li><code>$XDG_DATA_DIRS</code> (en su defecto: <code>/usr/local/share; /usr/share</code>)</li>
+</ol>
+<h2> Mimetype</h2>
+<p>Los ficheros tienen asociado un <a href="http://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions" target="_blank" rel="noopener noreferrer">Mimetype</a> que indica qué tipo de fichero es.</p>
+<p>Se clasifican mediante el esquema <em>media/subtipo</em>: <code>text/plain</code> o <code>image/jpg</code>.</p>
+<h2> Directorios</h2>
+<ul>
+<li><code>XDG/mime/packages</code>: plantillas</li>
+<li><code>XDG/mime/packages/MEDIA/subtype.xml</code>: definición de cada tipo</li>
+<li><code>XDG/mime/globs</code>: relación extensión Mimetype</li>
+<li><code>XDG/mime/magic</code>: relación patrón Mimetype</li>
+<li><code>XDG/mime/aliases</code>: alias de Mimetype</li>
+<li>Otros</li>
+</ul>
+<h2> Cómo se determina el Mimetype</h2>
+<p>En este orden:</p>
+<ol>
+<li><code>XDG/mime/globs</code>: relación extensión Mimetype</li>
+<li><code>XDG/mime/magic</code>: relación patrón Mimetype</li>
+</ol>
+<h2> Asociar MIMETYPE con aplicación por defecto</h2>
+<p><code>XDG/applications/defaults.list</code></p>
+<p>Ejemplo: <code>application/excel=calc.desktop</code></p>
+<div class="hint-container tip">
+<p class="hint-container-title">Truco</p>
+<p><code>gnomevfs-info</code> muestra el <em>mimetype</em> de un fichero.</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Cómo configuramos SLAB (más aplicaciones)</title>
+      <link>https://azlinux.github.io/posts/2009-08-27-como-configuramos-slab.html</link>
+      <guid>https://azlinux.github.io/posts/2009-08-27-como-configuramos-slab.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Cómo configuramos SLAB (más aplicaciones)</source>
+      <description>Navegador de aplicaciones SLAB Más aplicaciones Entorno XDG (http://standards.freedesktop.org/basedir-spec/latest/): ¿Cómo se genera? Partimos de XDGCONFIGDIRS/menus/application...</description>
+      <category>Desktop</category>
+      <pubDate>Thu, 27 Aug 2009 08:12:00 GMT</pubDate>
+      <content:encoded><![CDATA[<div style="text-align:center">
+<p><img src="/img/slab.png" alt="Navegador de aplicaciones SLAB" title="Navegador de aplicaciones SLAB"></p>
+</div>
+<!-- more -->
+<h2> Más aplicaciones</h2>
+<p>Entorno <a href="http://standards.freedesktop.org/basedir-spec/latest/" target="_blank" rel="noopener noreferrer">XDG</a>:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> ¿Cómo se genera?</h2>
+<p>Partimos de <code>XDG_CONFIG_DIRS/menus/applications.menu</code> como fichero base:</p>
+<ul>
+<li>
+<p><a href="http://standards.freedesktop.org/menu-spec/latest/" target="_blank" rel="noopener noreferrer">Crear menús</a> y submenús cuya definición está en ficheros <code>.directory</code></p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+<li>
+<p><a href="http://standards.freedesktop.org/desktop-entry-spec/latest/" target="_blank" rel="noopener noreferrer">Cada aplicación está definida</a> por un fichero <code>.desktop</code></p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+<li>
+<p>Dentro de cada menú se incluyen categorías para ser mostradas.Las aplicaciones son mostradas en función de las categorías definidas en su <code>.desktop</code>.</p>
+</li>
+<li>
+<p><code>XDG_CONFIG_DIRS/menus/applications.menu</code> pertenece al paquete <code>desktop-data</code>. Por lo tanto, es deseable no tocarlo.</p>
+</li>
+<li>
+<p>Para añadir cambios, usar la posibilidad de mergear <code>.menu</code>:</p>
+<ul>
+<li>Metemos nuevos <code>.menu</code> en <code>XDG_CONFIG_DIRS/menus/applications-merged/</code> (mergeo automatico).</li>
+<li>De esta menera podemos añadir menús o quitar entradas que no interesan.</li>
+</ul>
+</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://azlinux.github.io/img/slab.png &apos;Navegador de aplicaciones SLAB&apos;" type="image/"/>
+    </item>
+    <item>
+      <title>Cómo reconfiguramos el vídeo</title>
+      <link>https://azlinux.github.io/posts/2009-09-08-como-reconfiguramos-el-video.html</link>
+      <guid>https://azlinux.github.io/posts/2009-09-08-como-reconfiguramos-el-video.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Cómo reconfiguramos el vídeo</source>
+      <description>En muchas ocasiones la configuración de la tarjeta de vídeo en linux no responde, dando errores como:</description>
+      <category>Desktop</category>
+      <pubDate>Tue, 08 Sep 2009 07:16:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>En muchas ocasiones la configuración de la tarjeta de vídeo en linux no responde, dando errores como:</p>
+<!-- more -->
+<ul>
+<li>no se ve la pantalla</li>
+<li>mensaje del monitor: frecuencia no aceptada</li>
+<li>error: x86.org, x11 server, ...</li>
+<li>failed to start X server</li>
+</ul>
+<p>Se suelen producir cuando:</p>
+<ul>
+<li>Cambiamos la tarjeta de vídeo.</li>
+<li>Cambiamos el monitor (aunque sea el mismo modelo).</li>
+<li>Se va la configuración de la BIOS (pila, ...).</li>
+<li>El usuario cambia la resolución.</li>
+</ul>
+<h2> Solución</h2>
+<p>Reconfigurar la configuración de vídeo a través de la herramienta <strong>SaX2</strong>.</p>
+<div style="text-align:center">
+<p><img src="/img/sax2.png" alt="Herramienta SaX2" title="Herramienta SaX2"></p>
+</div>
+<h2> Procedimiento</h2>
+<ul>
+<li>Acceder a un terminal: <code>Ctrl+Alt+F1</code></li>
+<li>Identificarse como <strong>root</strong>.</li>
+<li>Pasar el sistema a entorno sólo texto: <code>init 3</code></li>
+<li>Si no devuelve el <em>prompt</em> del sistema, pulsar <code>Ctrl + C</code></li>
+<li>Iniciar la herramienta SaX2: <code>sax2</code></li>
+<li>Seleccionar <strong>Change Configuration</strong>.</li>
+<li>Elegir monitor y resolución más adecuados.</li>
+<li><strong>Siempre</strong>: realizar test para comprobar que se ve correctamente el entorno gráfico.</li>
+<li>Guardar cambios.</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://azlinux.github.io/img/sax2.png &apos;Herramienta SaX2&apos;" type="image/"/>
+    </item>
+    <item>
+      <title>Algunos manuales básicos</title>
+      <link>https://azlinux.github.io/posts/2009-09-09-algunos-manuales-basicos.html</link>
+      <guid>https://azlinux.github.io/posts/2009-09-09-algunos-manuales-basicos.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Algunos manuales básicos</source>
+      <description>Encontrar información de calidad sobre una distribución concreta no es fácil.</description>
+      <category>Documentación</category>
+      <pubDate>Wed, 09 Sep 2009 07:38:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Encontrar información de calidad sobre una distribución concreta no es fácil.</p>
+<!-- more -->
+<p>Os dejamos dos manuales básicos para entender nuestra distribución basada en SLED:</p>
+<ul>
+<li>
+<p><a href="/files/userguide_gnome_sp1.pdf">Guía del usuario de SUSE Linux Enterprise Desktop 10 SP1 con GNOME</a>.</p>
+</li>
+<li>
+<p><a href="/files/sled_deployment_sp1.pdf">SUSE Linux Enterprise Desktop - Deployment Guide</a>.</p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Preferencias de usuario vs. PPD</title>
+      <link>https://azlinux.github.io/posts/2009-09-14-preferencias-usuario-vs-ppd.html</link>
+      <guid>https://azlinux.github.io/posts/2009-09-14-preferencias-usuario-vs-ppd.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Preferencias de usuario vs. PPD</source>
+      <description>Las preferencias de impresión (duplex, páginas por hoja, tamaños, ...) pueden configurarse para todos los usuarios del sistema o ser personalizadas para cada usuario. Las preferencias globales vienen marcadas por el fichero PPD de cada impresora y las personalizaciones de cada usuario en el fichero $HOME/.lpoptions.</description>
+      <category>Impresión</category>
+      <pubDate>Mon, 14 Sep 2009 11:29:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Las preferencias de impresión (<em>duplex</em>, páginas por hoja, tamaños, ...) pueden configurarse para todos los usuarios del sistema o ser personalizadas para cada usuario. Las preferencias globales vienen marcadas por el fichero PPD de cada impresora y las personalizaciones de cada usuario en el fichero <code>$HOME/.lpoptions</code>.</p>
+<!-- more -->
+<h2> Preferencias globales PPD</h2>
+<ul>
+<li>Basadas en el fichero PPD que corresponde con la impresora.</li>
+<li>Directorio ficheros PPD: <code>/etc/cups/ppd</code>.</li>
+<li>Válidas para todos los usuarios del sistema.</li>
+<li>Modificaciones: <strong>YAST</strong> o editar PPD.</li>
+</ul>
+<h2> Preferencias locales .lpoptions</h2>
+<ul>
+<li>Se almacenan en <code>$HOME/.lpoptions</code> de cada usuario. Por lo tanto, sólo son válidas para el usuario que las defina.</li>
+<li>Sobrescriben a las opciones marcadas en el PPD de la impresora.</li>
+<li>Modificaciones: <code>gnome-printer-manager</code> (icono impresoras del usuario) o editar <code>$HOME/.lpoptions</code>.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Nuestros problemas con la búsqueda de texto en ficheros</title>
+      <link>https://azlinux.github.io/posts/2009-09-17-nuestros-problemas-busqueda-texto.html</link>
+      <guid>https://azlinux.github.io/posts/2009-09-17-nuestros-problemas-busqueda-texto.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Nuestros problemas con la búsqueda de texto en ficheros</source>
+      <description>Hoy toca llorar un poco. Tenemos un problema relacionado con la búsqueda de texto en ficheros.</description>
+      <category>Otros</category>
+      <pubDate>Thu, 17 Sep 2009 13:15:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Hoy toca llorar un poco. Tenemos un problema relacionado con la búsqueda de texto en ficheros.</p>
+<!-- more -->
+<p>Me explico. Deseamos buscar una cadena de texto dentro de un documento <code>txt</code>, <code>doc</code>, <code>odt</code> o <code>pdf</code>, teniendo en cuenta que:</p>
+<ul>
+<li><code>txt</code>: fichero de texto plano.</li>
+<li><code>doc</code>: linux lo ve como binario.</li>
+<li><code>odt</code>: en realidad es un conjunto de ficheros XML comprimidos.</li>
+</ul>
+<h2> Posibles soluciones</h2>
+<ul>
+<li>Buscar de Gnome (<code>gnome-search-tool</code>): sólo encuentra en <code>txt</code>.</li>
+<li>Buscar de KDE (<code>kfind</code>): sólo encuentra en <code>txt</code> y <code>odt</code>.</li>
+<li>Beagle: indexa todos lo ficheros pero inviable cuando lo usamos con ficheros de red (por sobrecarga).</li>
+<li>Tracker: lo mismo que Beagle.</li>
+</ul>
+<h2> Conclusión</h2>
+<ul>
+<li>Necesitamos una herramienta que busque cadenas de texto en <code>doc</code>, <code>odt</code> y <code>pdf</code> fundamentalmente.</li>
+<li>No vale un indexador tipo Beagle pues sobrecarga la red.</li>
+</ul>
+<p><strong>¿Ideas?</strong></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Añadir o quitar programas en el inicio de sesión</title>
+      <link>https://azlinux.github.io/posts/2009-09-21-anadir-quitar-programas-inicio.html</link>
+      <guid>https://azlinux.github.io/posts/2009-09-21-anadir-quitar-programas-inicio.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Añadir o quitar programas en el inicio de sesión</source>
+      <description>Cómo añadir o quitar aplicaciones para que arranquen en el inicio del escritorio (equivalente al Programas &amp;gt; Inicio de Windows).</description>
+      <category>Desktop</category>
+      <pubDate>Mon, 21 Sep 2009 10:27:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Cómo añadir o quitar aplicaciones para que arranquen en el inicio del escritorio (equivalente al <strong>Programas &gt; Inicio</strong> de Windows).</p>
+<!-- more -->
+<h2> Procedimiento</h2>
+<ul>
+<li>Acceder al Centro de Control del Usuario.</li>
+<li>Acceder a Sesiones: Programas al Inicio.</li>
+<li>Añadir, quitar aplicaciones.</li>
+<li>También pueden desactivarse por si es necesario activarlas mas tarde.</li>
+</ul>
+<div style="text-align:center">
+<p><img src="/img/sesiones.png" alt="Configuración del inicio de sesión" title="Configuración del inicio de sesión"></p>
+</div>
+<p>En nuestro caso, para evitar este tedioso procedimiento, utilizamos un paquete <strong>rpm</strong> que añade el lanzador (<code>fichero.desktop</code>) correspondiente en <code>/etc/xdg/autostart</code>.</p>
+]]></content:encoded>
+      <enclosure url="https://azlinux.github.io/img/sesiones.png &apos;Configuración del inicio de sesión&apos;" type="image/"/>
+    </item>
+    <item>
+      <title>Cómo usamos WINE</title>
+      <link>https://azlinux.github.io/posts/2009-09-24-como-usamos-wine.html</link>
+      <guid>https://azlinux.github.io/posts/2009-09-24-como-usamos-wine.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Cómo usamos WINE</source>
+      <description>WINE, según Wikipedia es: Wine (acrónimo recursivo en inglés para Wine Is Not an Emulator, que significa «Wine no es un emulador») es una reimplementación de la API de Win16 y W...</description>
+      <category>Otros</category>
+      <pubDate>Thu, 24 Sep 2009 08:21:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p><strong>WINE</strong>, según Wikipedia es:</p>
+<blockquote>
+<p>Wine (acrónimo recursivo en inglés para Wine Is Not an Emulator, que significa «Wine no es un emulador») es una reimplementación de la API de Win16 y Win32 para sistemas operativos basados en Unix. Permite la ejecución de programas para MS-DOS, Windows 3.11, 95, 98, ME, NT, 2000, XP, Vista y Windows 7.</p>
+</blockquote>
+<p>Es decir, permite ejecutar algunas aplicaciones Windows dentro de nuestro Linux. En nuestro caso nos permite ejecutar un buen conjunto de aplicaciones Windows que, o no tienen una alternativa, o esta no es viable para nuestro entorno.</p>
+<p>Os pongo algunos ejemplos:</p>
+<ul>
+<li>
+<p><strong>Microsoft Access</strong>: tenemos cientos de aplicaciones <strong>Access</strong> que por falta de tiempo y medios no podemos migrar a un entorno <em>Open Source</em>. <strong>WINE</strong> permite emular muchas de ellas aunque el código deba ser revisado, compilado y compactado de nuevo. Un caso particular, no resuelto todavía, son las aplicaciones <strong>Access</strong> que generan una combinación de correspondencia con documentos <strong>Word</strong>.</p>
+</li>
+<li>
+<p>*<em>OCR</em>: por el momento no hemos encontrado una alternativa eficiente al uso de software OCR por lo que "emulamos" software de OCR de Windows con WINE.</p>
+</li>
+<li>
+<p>Entorno transaccional: el cliente para nuestro entorno transaccional es antiguo y sólo funciona para entornos Windows por lo que el uso de <strong>WINE</strong> ha sido imprescindible.</p>
+</li>
+<li>
+<p>En contraposición, también tenemos que decir que algunas aplicaciones no han podido ser emuladas con <strong>WINE</strong>, como <strong>Presto</strong> o <strong>Nokia PC Suite</strong>. Hasta ahora <strong>WINE</strong> tampoco ha sido útil para emular aplicaciones de <strong>CAD</strong>.</p>
+</li>
+</ul>
+<p>En conclusión podemos decir que <strong>WINE</strong> es una herramienta útil en algunos casos y que nos permite avanzar en la migración a entorno <em>Open Source</em> mientras las alternativas al software propietario estén disponibles y a la altura de estas.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Balance del año 2012</title>
+      <link>https://azlinux.github.io/posts/2012-12-20-balance-2012.html</link>
+      <guid>https://azlinux.github.io/posts/2012-12-20-balance-2012.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Balance del año 2012</source>
+      <description>Esta es la historia de un grupo de pioneros. Aún hoy, todavía quedan tierras por conquistar y paraísos por descubrir. Y alguien tiene que hacerlo. Sólo los espíritus indomables son capaces de hacer frente a las adversidades del camino y continuar su periplo día tras día.</description>
+      <category>Otros</category>
+      <pubDate>Thu, 20 Dec 2012 13:41:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Esta es la historia de un grupo de pioneros. Aún hoy, todavía quedan tierras por conquistar y paraísos por descubrir. Y alguien tiene que hacerlo. Sólo los espíritus indomables son capaces de hacer frente a las adversidades del camino y continuar su periplo día tras día.</p>
+<!-- more -->
+<div style="text-align:center">
+<p><img src="/img/pioneers_gsl_aytozgz_2012.png" alt="Grupo Software Libre, año 2012" title="Grupo Software Libre, año 2012"></p>
+</div>
+<p>Este 2012 que acaba, termina para nosotros mucho mejor de lo que empezó. A finales del año anterior y a principios de este, habíamos padecido graves problemas de integración de nuestro  con documentos ofimáticos y eso había conllevado casi un parón total en las migraciones de equipos a Linux.</p>
+<p>Pero, como dice el dicho, a grandes males, grandes remedios. Ni cortos ni perezosos, no esperamos a que nadie viniera a solucionarnos el tema y, por nuestra cuenta (como hacen los auténticos pioneros), dimos un rodeo al problema y convertimos el contratiempo en una nueva oportunidad. Aunque perdíamos alguna funcionalidad, utilizamos el protocolo  (más arcaico que la evolución que presentaba el NCL) para conectarnos a nuestros servidores de ficheros.</p>
+<p>Esto resolvió la encrucijada y, además de permitirnos retomar las migraciones, también nos dio la ocasión de no anclarnos sólo a sistemas basados en SuSE para desarrollar AZLinux. El <a href="http://rpmfind.net/linux/rpm2html/search.php?query=ncpfs" target="_blank" rel="noopener noreferrer">paquete ncpfs también se encuentra disponible para otras distribuciones</a> y pensamos que era el <a href="">momento perfecto para pensar en otras posibilidades</a>.</p>
+<p>Finalmente nos decantamos por Ubuntu y, durante gran parte del presente año, hemos trabajado en <a href="">adaptarlo a nuestras necesidades</a>. En <a href="">octubre ya teníamos una plataforma bastante estable</a> y desde entonces hemos estado haciendo pruebas con un grupo escogido de usuarios. El año que viene será ya nuestro buque insignia.</p>
+<p>Pero no sólo nos hemos dedicado a pensar en el futuro, sino que también hemos gastado nuestros recursos en mejorar procesos internos. Sobre todo, han ido encaminados en dos frentes.</p>
+<p>El primero, en unificar, mejorar y ampliar nuestros procesos automáticos de migraciones. Como resultado, publicamos un <a href="/files/azl-ocs.pdf">esquema que resume el amplio abanico de posibilidades que cubrimos hasta el momento</a>.</p>
+<div style="text-align:center">
+</div>
+<p>El segundo, en conseguir que nuestra navaja suiza, <a href="http://migasfree.org/" target="_blank" rel="noopener noreferrer">migasfree</a>, nos sirviera también para interactuar con equipos Microsoft Windows. A día de hoy, ya tenemos un cliente para esta plataforma que es capaz de inventariar el equipo en el servidor y recoger información sobre el hardware. Próximamente será capaz de instalar/desinstalar software empaquetado. También estamos dedicando esfuerzos en mejorar la usabilidad del servidor y en agilizar el sistema de instalación para que sea más fácil captar usuarios que puedan contribuir a enriquecer más esta aplicación.</p>
+<p>Como he dicho al empezar, ha sido un gran año para nosotros y sólo nos queda un deseo para el que viene: que podamos continuar afrontando nuevos desafíos, porque ganas no nos faltan 😉.</p>
+]]></content:encoded>
+      <enclosure url="https://azlinux.github.io/img/pioneers_gsl_aytozgz_2012.png &apos;Grupo Software Libre, año 2012&apos;" type="image/"/>
+    </item>
+    <item>
+      <title>Software libre, ¿qué es para nosotros?</title>
+      <link>https://azlinux.github.io/posts/2013-04-19-software-libre-para-nosotros.html</link>
+      <guid>https://azlinux.github.io/posts/2013-04-19-software-libre-para-nosotros.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Software libre, ¿qué es para nosotros?</source>
+      <description>Recientemente nos pidieron desde el MOOC de Miríada X la realización de un pequeño vídeo sobre nuestro equipo de trabajo... y allá que fuimos.</description>
+      <category>Presentación</category>
+      <pubDate>Fri, 19 Apr 2013 08:11:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Recientemente nos pidieron desde el <a href="http://miriadax.net/" target="_blank" rel="noopener noreferrer">MOOC de Miríada X</a> la realización de un pequeño vídeo sobre nuestro equipo de trabajo... y allá que fuimos.</p>
+<!-- more -->
+<p>En este pequeño documental describimos brevemente nuestro trabajo de implantación de Software Libre en los escritorios del Ayuntamiento de Zaragoza y, sobre todo, plasmamos las opiniones personales de los miembros del equipo AZLinux.</p>
+<p>Esperamos que os guste.</p>
+<div style="text-align:center">
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Pese a todo, seguimos ahí</title>
+      <link>https://azlinux.github.io/posts/2015-03-30-pese-a-todo-seguimos-ahi.html</link>
+      <guid>https://azlinux.github.io/posts/2015-03-30-pese-a-todo-seguimos-ahi.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">Pese a todo, seguimos ahí</source>
+      <description>AZLinux y sus molinos Hacía ya un par de años en que no nos dejábamos caer por el blog. Las razones han sido diversas, pero ha habido una que se alza por encima de las demás: la...</description>
+      <category>Evolución</category>
+      <category>Dificultades</category>
+      <pubDate>Mon, 30 Mar 2015 10:50:00 GMT</pubDate>
+      <content:encoded><![CDATA[<div style="text-align:center">
+<p><img src="/img/beastie-tux-quijote.jpg" alt="AZLinux y sus molinos" title="AZLinux y sus molinos"></p>
+</div>
+<p>Hacía ya un par de años en que no nos dejábamos caer por el blog. Las razones han sido diversas, pero ha habido una que se alza por encima de las demás: la falta de novedades.</p>
+<p>El otro día me preguntaban si habíamos tocado techo con respecto a los equipos que podíamos pasar de Windows a Linux. Mi respuesta fue esta: <strong>nos han hecho tocar techo</strong>. Desde hace 2 años, el número de equipos con Linux se mantiene estable: 1/3 del total. Nunca nos lo han puesto fácil, pero es que, por más que pidamos colaboraciones, no hay voluntad por ir todos en la misma dirección.</p>
+<p>¿Y en qué hemos dedicado este tiempo? Pues muy sencillo. En seguir dedicándonos a lo nuestro, contando únicamente con nuestros recursos. Si a finales de 2012 empezábamos nuestra andadura con Ubuntu (AZLinux 12), a día de hoy, los 1100 equipos con Linux tienen la misma versión.</p>
+<p>También hemos continuado divulgando nuestra experiencia y, gracias a ella, junto con otras personas, creamos el <a href="https://web.archive.org/web/20150420002829/http://www.vitalinux.org/" target="_blank" rel="noopener noreferrer">proyecto Vitalinux</a>. Para cada uno de nosotros tiene un significado y objetivos distintos pero, para mí, tenía uno muy claro: <strong>dar a conocer nuestro método de trabajo al gran público para que otras organizaciones puedan seguir nuestros pasos</strong>.</p>
+<p>AZLinux, como ya hemos comentado en otras ocasiones, es una "distribución" adaptada a las necesidades del Ayuntamiento. Fuera de ese ámbito, no tiene sentido aplicarla, simplemente, porque las necesidades en otros sitios, son diferentes. Pero sí se pueden aplicar <a href="https://speakerdeck.com/jact/azlinux-vitalinux-y-paqueteria-deb" target="_blank" rel="noopener noreferrer">las herramientas que usamos y la experiencia que hemos ido acumulando en el viaje</a>.</p>
+<p>Aun contando con pocos recursos, el proyecto Vitalinux está teniendo una gran repercusión y <a href="https://wiki.vitalinux.educa.aragon.es/" target="_blank" rel="noopener noreferrer">el departamento de Educación de la DGA se ha fijado en nosotros y ha empezado un piloto para los colegios públicos basándose en él</a>.</p>
+<h2> Otras piedras en el camino</h2>
+<p><strong>Las bases de datos Access</strong> que salen como hongos tras un día de lluvia. Bases de datos que tienen varios problemas graves:</p>
+<ul>
+<li>La mayoría no están hechas por programadores, por lo que cada una está hecha de forma diferente y con métodos que dificultan el poderlas usar bajo un entorno en Wine.</li>
+<li>No están controladas, por lo que es difícil planificar acciones reactivas.</li>
+<li>Esto pone de manifiesto que hay necesidades informáticas que no están cubiertas por los recursos del propio Ayuntamiento. Seguramente debido al pobre dimensionado del departamento de informática, que se ve incapaz de atender todas estas necesidades.</li>
+</ul>
+<p>Se siguen usando programas privativos en lugar de buscar alternativas basadas en formatos abiertos o entornos que fomenten la multiplataforma. Este planteamiento continuista también provoca dificultades porque:</p>
+<ul>
+<li>Algunos son programas antiguos muy ligados a una determinada plataforma y pone complicado incluso actualizar esa plataforma. Además, si esos programas ya no tienen actualizaciones, o la empresa que lo ha hecho ya no existe, no hay opción para evolucionar a otra cosa sin un gasto añadido.</li>
+<li>Otros, al ser programas poco extendidos (o hechos <em>ad hoc</em> para un departamento), es bastante probable que no puedan ejecutarse en un entorno en Wine.</li>
+<li>Pero la peor de todas es cuando argumentan: <strong>esto ha funcionado siempre así</strong>. El inmovilismo es, de lejos, el problema más grave, porque tiene detrás un problema de actitud.</li>
+</ul>
+<p><strong>El acceso y firma con certificados digitales en sitios web</strong>. Las sedes electrónicas de la administración pública española (ya sea general, autonómica o local) son un crisol de applets Java, con requisitos diferentes y sin unificación de criterios, que hacen verdaderamente complicado tener una única plataforma de acceso a todas ellas. Algunos de los problemas se dan en todos los sistemas operativos, como la versión y configuración de la JVM o el navegador, pero hay otros problemas que atañen especialmente a Linux.</p>
+<p>Esto es así por nuestra particular infraestructura. Los certificados digitales de empleado público residen en tarjetas criptográficas. Es precisamente el acceso al almacén de la tarjeta lo que nos trae más quebraderos de cabeza.</p>
+<p>Existe un proyecto libre llamado <a href="https://github.com/OpenSC/OpenSC/wiki" target="_blank" rel="noopener noreferrer">OpenSC</a>, que tiene como objetivo facilitar este acceso a las diferentes tarjetas. Este proyecto tiene bastante alcance y difusión, por lo que todas las distribuciones base de Linux proveen versiones listas para el consumo. El único requisito es que es necesario publicar las especificaciones técnicas de cada tarjeta en el proyecto.</p>
+<p>La FNMT-RCM es quien ha hecho esas especificaciones para nuestras tarjetas criptográficas (Ceres). Sin embargo, en lugar de aunar esfuerzos con otras organizaciones de otros países y contribuir al proyecto OpenSC, ha decidido crear sus propias herramientas de acceso. Aquí tenemos patente un problema de dependencia tecnológica, pero que además se ve agravado en entornos Linux. Esto es así porque no todas las funcionalidades que tienen las herramientas para entornos Windows tienen equivalencia en las que publican para Linux. Además, sólo soportan un pequeño número de distribuciones Linux, por lo que están limitando elecciones.</p>
+<p>Hemos reclamado estas circunstancias en repetidas ocasiones, pero mucho me temo que no tienen en consideración nuestras peticiones porque nuestro caso es demasiado singular: debemos ser la única administración pública que usa Linux y tarjetas criptográficas para sus certificados. Si fueran una empresa privada podría entender su planteamiento. Siendo parte de la administración pública española... no soy experto en leyes pero... creo que la <a href="http://es.wikipedia.org/wiki/Ley_de_Acceso_Electr%C3%B3nico_de_los_Ciudadanos_a_los_Servicios_P%C3%BAblicos" target="_blank" rel="noopener noreferrer">Ley 11/2007</a> tendría algo que decir al respecto.</p>
+<p>Somos una organización heterogénea, también tecnológicamente hablando, y queremos seguir así durante mucho tiempo. Primero porque no nos gustaría desandar lo que hemos conseguido hasta ahora y, segundo, porque aun falta mucho por recorrer. Y no es tanto un problema técnico (que rara vez lo es) sino por problemas de cerrazón e incapacidad evolutiva. Esta es la tarea que llevará más tiempo.</p>
+]]></content:encoded>
+      <enclosure url="https://azlinux.github.io/img/beastie-tux-quijote.jpg &apos;AZLinux y sus molinos&apos;" type="image/"/>
+    </item>
+    <item>
+      <title>La frugalidad de AZLinux</title>
+      <link>https://azlinux.github.io/posts/2020-07-24-la-frugalidad-de-azlinux.html</link>
+      <guid>https://azlinux.github.io/posts/2020-07-24-la-frugalidad-de-azlinux.html</guid>
+      <source url="https://azlinux.github.io/rss.xml">La frugalidad de AZLinux</source>
+      <description>Han pasado más de 5 años desde la última entrada en esta bitácora (2015-03-30-pese-a-todo-seguimos-ahi). Cinco años que han dado para mucho. Cinco años en los que hemos dado la ...</description>
+      <category>Evolución</category>
+      <pubDate>Fri, 24 Jul 2020 09:27:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Han pasado más de 5 años desde la <a href="2015-03-30-pese-a-todo-seguimos-ahi">última entrada en esta bitácora</a>. Cinco años que han dado para mucho. Cinco años en los que hemos dado la vuelta a la tortilla, ya que actualmente, el 70% de los ordenadores del Ayuntamiento de Zaragoza tienen un sistema operativo Linux. Cinco años en los que el <a href="https://wiki.vitalinux.educa.aragon.es/" target="_blank" rel="noopener noreferrer">proyecto Vitalinux Edu de la DGA</a>, heredero del germen que supuso <a href="https://es.wikipedia.org/wiki/Vitalinux" target="_blank" rel="noopener noreferrer">Vitalinux</a>, ha nacido y se ha expandido en casi 80 centros educativos de Aragón.</p>
+<p>La palabra <a href="https://es.wikipedia.org/wiki/Frugalidad" target="_blank" rel="noopener noreferrer">frugalidad</a> parece que está últimamente de moda. Puede tener connotaciones negativas como austeridad o pasividad, pero en nuestro contexto, tiene connotaciones muy positivas, ya que están relacionadas con la <strong>optimización</strong> y la <strong>eficiencia</strong>. A lo largo de este tiempo, se han visto mermados nuestros recursos humanos para afrontar la migración a software libre dentro del Ayuntamiento, pero cada día teníamos que dar soporte a más ordenadores y realizábamos más proyectos en paralelo. Nuestra receta ha sido sencilla: aplicar los procedimientos adecuados y llevar a cabo la <a href="https://es.wikipedia.org/wiki/Proceso_de_mejora_continua" target="_blank" rel="noopener noreferrer">mejora continua</a> siempre que nos ha sido posible.</p>
+<p>Sólo así se entiende como un equipo reducido de personas lleven el desarrollo y la gestión de más de 3000 ordenadores en el Ayuntamiento. Personas que, si por algo destacan, es por intentar aplicar el sentido común en cada una de sus acciones: no reinventar la rueda, apoyarse en hombros de gigantes y hacerlo todo lo más sencillo posible para que sea mantenible en el tiempo. Este planteamiento es el que nos ha conducido a la receta: <strong>paquetería linux + migasfree + integración continua</strong>.</p>
+<p>Partimos de la integridad y auditoría que otorgan los paquetes Linux al sistema operativo. Después, desarrollamos <a href="http://migasfree.org/" target="_blank" rel="noopener noreferrer">migasfree</a> para agilizar y controlar las tareas de mantenimiento de los ordenadores. Finalmente, hemos montado un sistema de integración continua basándonos en <a href="https://about.gitlab.com/" target="_blank" rel="noopener noreferrer">GitLab</a>, cerrando así el flujo de trabajo.</p>
+<p>Este método de trabajo es el que también explica cómo hemos respondido a los desafíos que nos ha traído esta pandemia. En un tiempo récord teníamos que satisfacer la demanda del teletrabajo para los empleados municipales. En 3 días ya tuvimos un sistema operativo Linux preparado para trabajar a través de una VPN municipal. Gracias a migasfree, hemos podido evolucionar este proyecto para mejorar la experiencia de usuario y la seguridad de las conexiones. En 3 meses hemos dado servicio a casi 800 nuevas estaciones de teletrabajo, entre ordenadores dedicados y máquinas virtuales.</p>
+<p>AZLinux no es una <em>distro</em> generalista. Está pensada para un entorno muy concreto: el Ayuntamiento de Zaragoza. Pero lo que sí podemos transmitir es <a href="https://speakerdeck.com/jact/azlinux-vitalinux-y-paqueteria-deb" target="_blank" rel="noopener noreferrer">nuestro modelo</a> y las <a href="https://speakerdeck.com/jact/migasfree-experiences-1" target="_blank" rel="noopener noreferrer">herramientas que usamos</a>. Esperamos que nuestras experiencias puedan ser seguidas por otros organismos, ya sean públicos o privados. Hemos demostrado que con <strong>determinación</strong>, <strong>motivación</strong> y <strong>constancia</strong> es posible cambiar las cosas desde dentro y ser cada día más eficientes y eficaces.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
