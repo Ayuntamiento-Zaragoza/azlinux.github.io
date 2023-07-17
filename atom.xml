@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://azlinux.github.io/atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://azlinux.github.io/azlinux.github.io/atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-ES">
-  <id>https://azlinux.github.io/</id>
+  <id>https://azlinux.github.io/azlinux.github.io/</id>
   <title>AZLinux</title>
   <subtitle>Distribución Linux del Ayuntamiento de Zaragoza para los empleados municipales</subtitle>
-  <updated>2023-07-17T11:27:29.282Z</updated>
+  <updated>2023-07-17T11:34:43.104Z</updated>
   <generator>vuepress-plugin-feed2</generator>
-  <link rel="self" href="https://azlinux.github.io/atom.xml"/>
-  <link rel="alternate" href="https://azlinux.github.io/"/>
+  <link rel="self" href="https://azlinux.github.io/azlinux.github.io/atom.xml"/>
+  <link rel="alternate" href="https://azlinux.github.io/azlinux.github.io/"/>
   <category term="Seguridad"/>
   <category term="Impresión"/>
   <category term="Presentación"/>
@@ -24,8 +24,8 @@
   </contributor>
   <entry>
     <title type="text">Cómo hemos segurizado GRUB</title>
-    <id>https://azlinux.github.io/posts/2009-08-19-como-hemos-segurizado-grub.html</id>
-    <link href="https://azlinux.github.io/posts/2009-08-19-como-hemos-segurizado-grub.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-08-19-como-hemos-segurizado-grub.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-08-19-como-hemos-segurizado-grub.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p><a href="http://es.wikipedia.org/wiki/GNU_GRUB" target="_blank" rel="noopener noreferrer">GRUB</a> es el gestor de arranque que utilizamos en AZLinux.</p>
 ]]></summary>
@@ -59,8 +59,8 @@
   </entry>
   <entry>
     <title type="text">Cómo hemos traducido drivers de impresoras</title>
-    <id>https://azlinux.github.io/posts/2009-08-19-como-hemos-traducido-drivers-impresoras.html</id>
-    <link href="https://azlinux.github.io/posts/2009-08-19-como-hemos-traducido-drivers-impresoras.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-08-19-como-hemos-traducido-drivers-impresoras.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-08-19-como-hemos-traducido-drivers-impresoras.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>La definición de las impresoras en AZLinux (como cualquier otro GNU/Linux), se realiza mediante ficheros PPD.</p>
 <p>Cada PPD (archivos de descripción de impresoras PostScript®) define las características de la impresora.</p>
@@ -82,7 +82,7 @@
 <p>Como siempre, esperamos vuestras aportaciones y comentarios.</p>
 <h2> Enlaces</h2>
 <ul>
-<li><a href="/files/diccionario.txt">Nuestro diccionario particular</a>.</li>
+<li><a href="/files/diccionario.txt" target="_blank" rel="noopener noreferrer">Nuestro diccionario particular</a>.</li>
 <li><a href="http://partners.adobe.com/public/developer/en/ps/5003.PPD_Spec_v4.3.pdf" target="_blank" rel="noopener noreferrer">PostScript ® Printer Description File Format Specification Version 4.3 (PPD Spec 4.3)</a>.</li>
 </ul>
 ]]></content>
@@ -98,8 +98,8 @@
   </entry>
   <entry>
     <title type="text">Nace el blog de AZLinux</title>
-    <id>https://azlinux.github.io/posts/2009-08-19-nace-blog-azlinux.html</id>
-    <link href="https://azlinux.github.io/posts/2009-08-19-nace-blog-azlinux.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-08-19-nace-blog-azlinux.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-08-19-nace-blog-azlinux.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>AZLinux es la distribución GNU/Linux que hemos preparado en el Ayuntamiento de Zaragoza (España).</p>
 ]]></summary>
@@ -131,8 +131,8 @@
   </entry>
   <entry>
     <title type="text">Cómo utilizamos los scanners</title>
-    <id>https://azlinux.github.io/posts/2009-08-20-como-utilizamos-los-scanners.html</id>
-    <link href="https://azlinux.github.io/posts/2009-08-20-como-utilizamos-los-scanners.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-08-20-como-utilizamos-los-scanners.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-08-20-como-utilizamos-los-scanners.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<h2> SANE</h2>
 <p><a href="http://es.wikipedia.org/wiki/Scanner_Access_Now_Easy" target="_blank" rel="noopener noreferrer">Scanner Access Now Easy (SANE)</a> es una interfaz de programación de aplicaciones (API) que proporciona acceso estandarizado a cualquier dispositivo de escaneo (escáner de sobremesa, escáner de mano, cámaras y videocámaras, etc.). El API de SANE es de dominio público y su discusión y desarrollo está abierto a todo el mundo.</p>
@@ -230,8 +230,8 @@
   </entry>
   <entry>
     <title type="text">Cómo asociamos ficheros con aplicaciones</title>
-    <id>https://azlinux.github.io/posts/2009-08-25-como-asociamos-ficheros-con-aplicaciones.html</id>
-    <link href="https://azlinux.github.io/posts/2009-08-25-como-asociamos-ficheros-con-aplicaciones.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-08-25-como-asociamos-ficheros-con-aplicaciones.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-08-25-como-asociamos-ficheros-con-aplicaciones.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>Entendiendo <a href="https://specifications.freedesktop.org/basedir-spec/latest/" target="_blank" rel="noopener noreferrer">XDG Base Directory Specification</a>. Forma parte del estándar <a href="https://www.freedesktop.org/" target="_blank" rel="noopener noreferrer">freedesktop.org</a>. Define uno o más directorios base donde los ficheros deben ser buscados.</p>
 ]]></summary>
@@ -280,8 +280,8 @@
   </entry>
   <entry>
     <title type="text">Cómo configuramos SLAB (más aplicaciones)</title>
-    <id>https://azlinux.github.io/posts/2009-08-27-como-configuramos-slab.html</id>
-    <link href="https://azlinux.github.io/posts/2009-08-27-como-configuramos-slab.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-08-27-como-configuramos-slab.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-08-27-como-configuramos-slab.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<div style="text-align:center">
 <p><img src="/img/slab.png" alt="Navegador de aplicaciones SLAB" title="Navegador de aplicaciones SLAB"></p>
@@ -329,8 +329,8 @@
   </entry>
   <entry>
     <title type="text">Cómo reconfiguramos el vídeo</title>
-    <id>https://azlinux.github.io/posts/2009-09-08-como-reconfiguramos-el-video.html</id>
-    <link href="https://azlinux.github.io/posts/2009-09-08-como-reconfiguramos-el-video.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-09-08-como-reconfiguramos-el-video.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-09-08-como-reconfiguramos-el-video.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>En muchas ocasiones la configuración de la tarjeta de vídeo en linux no responde, dando errores como:</p>
 ]]></summary>
@@ -379,8 +379,8 @@
   </entry>
   <entry>
     <title type="text">Algunos manuales básicos</title>
-    <id>https://azlinux.github.io/posts/2009-09-09-algunos-manuales-basicos.html</id>
-    <link href="https://azlinux.github.io/posts/2009-09-09-algunos-manuales-basicos.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-09-09-algunos-manuales-basicos.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-09-09-algunos-manuales-basicos.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>Encontrar información de calidad sobre una distribución concreta no es fácil.</p>
 ]]></summary>
@@ -389,10 +389,10 @@
 <p>Os dejamos dos manuales básicos para entender nuestra distribución basada en SLED:</p>
 <ul>
 <li>
-<p><a href="/files/userguide_gnome_sp1.pdf">Guía del usuario de SUSE Linux Enterprise Desktop 10 SP1 con GNOME</a>.</p>
+<p><a href="/files/userguide_gnome_sp1.pdf" target="_blank" rel="noopener noreferrer">Guía del usuario de SUSE Linux Enterprise Desktop 10 SP1 con GNOME</a>.</p>
 </li>
 <li>
-<p><a href="/files/sled_deployment_sp1.pdf">SUSE Linux Enterprise Desktop - Deployment Guide</a>.</p>
+<p><a href="/files/sled_deployment_sp1.pdf" target="_blank" rel="noopener noreferrer">SUSE Linux Enterprise Desktop - Deployment Guide</a>.</p>
 </li>
 </ul>
 ]]></content>
@@ -408,8 +408,8 @@
   </entry>
   <entry>
     <title type="text">Preferencias de usuario vs. PPD</title>
-    <id>https://azlinux.github.io/posts/2009-09-14-preferencias-usuario-vs-ppd.html</id>
-    <link href="https://azlinux.github.io/posts/2009-09-14-preferencias-usuario-vs-ppd.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-09-14-preferencias-usuario-vs-ppd.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-09-14-preferencias-usuario-vs-ppd.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>Las preferencias de impresión (<em>duplex</em>, páginas por hoja, tamaños, ...) pueden configurarse para todos los usuarios del sistema o ser personalizadas para cada usuario. Las preferencias globales vienen marcadas por el fichero PPD de cada impresora y las personalizaciones de cada usuario en el fichero <code>$HOME/.lpoptions</code>.</p>
 ]]></summary>
@@ -441,8 +441,8 @@
   </entry>
   <entry>
     <title type="text">Nuestros problemas con la búsqueda de texto en ficheros</title>
-    <id>https://azlinux.github.io/posts/2009-09-17-nuestros-problemas-busqueda-texto.html</id>
-    <link href="https://azlinux.github.io/posts/2009-09-17-nuestros-problemas-busqueda-texto.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-09-17-nuestros-problemas-busqueda-texto.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-09-17-nuestros-problemas-busqueda-texto.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>Hoy toca llorar un poco. Tenemos un problema relacionado con la búsqueda de texto en ficheros.</p>
 ]]></summary>
@@ -480,8 +480,8 @@
   </entry>
   <entry>
     <title type="text">Añadir o quitar programas en el inicio de sesión</title>
-    <id>https://azlinux.github.io/posts/2009-09-21-anadir-quitar-programas-inicio.html</id>
-    <link href="https://azlinux.github.io/posts/2009-09-21-anadir-quitar-programas-inicio.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-09-21-anadir-quitar-programas-inicio.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-09-21-anadir-quitar-programas-inicio.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>Cómo añadir o quitar aplicaciones para que arranquen en el inicio del escritorio (equivalente al <strong>Programas &gt; Inicio</strong> de Windows).</p>
 ]]></summary>
@@ -511,8 +511,8 @@
   </entry>
   <entry>
     <title type="text">Cómo usamos WINE</title>
-    <id>https://azlinux.github.io/posts/2009-09-24-como-usamos-wine.html</id>
-    <link href="https://azlinux.github.io/posts/2009-09-24-como-usamos-wine.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-09-24-como-usamos-wine.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-09-24-como-usamos-wine.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p><strong>WINE</strong>, según Wikipedia es:</p>
 <blockquote>
@@ -552,8 +552,8 @@
   </entry>
   <entry>
     <title type="text">Balance del año 2012</title>
-    <id>https://azlinux.github.io/posts/2012-12-20-balance-2012.html</id>
-    <link href="https://azlinux.github.io/posts/2012-12-20-balance-2012.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2012-12-20-balance-2012.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2012-12-20-balance-2012.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>Esta es la historia de un grupo de pioneros. Aún hoy, todavía quedan tierras por conquistar y paraísos por descubrir. Y alguien tiene que hacerlo. Sólo los espíritus indomables son capaces de hacer frente a las adversidades del camino y continuar su periplo día tras día.</p>
 ]]></summary>
@@ -567,7 +567,7 @@
 <p>Esto resolvió la encrucijada y, además de permitirnos retomar las migraciones, también nos dio la ocasión de no anclarnos sólo a sistemas basados en SuSE para desarrollar AZLinux. El <a href="http://rpmfind.net/linux/rpm2html/search.php?query=ncpfs" target="_blank" rel="noopener noreferrer">paquete ncpfs también se encuentra disponible para otras distribuciones</a> y pensamos que era el <a href="">momento perfecto para pensar en otras posibilidades</a>.</p>
 <p>Finalmente nos decantamos por Ubuntu y, durante gran parte del presente año, hemos trabajado en <a href="">adaptarlo a nuestras necesidades</a>. En <a href="">octubre ya teníamos una plataforma bastante estable</a> y desde entonces hemos estado haciendo pruebas con un grupo escogido de usuarios. El año que viene será ya nuestro buque insignia.</p>
 <p>Pero no sólo nos hemos dedicado a pensar en el futuro, sino que también hemos gastado nuestros recursos en mejorar procesos internos. Sobre todo, han ido encaminados en dos frentes.</p>
-<p>El primero, en unificar, mejorar y ampliar nuestros procesos automáticos de migraciones. Como resultado, publicamos un <a href="/files/azl-ocs.pdf">esquema que resume el amplio abanico de posibilidades que cubrimos hasta el momento</a>.</p>
+<p>El primero, en unificar, mejorar y ampliar nuestros procesos automáticos de migraciones. Como resultado, publicamos un <a href="/files/azl-ocs.pdf" target="_blank" rel="noopener noreferrer">esquema que resume el amplio abanico de posibilidades que cubrimos hasta el momento</a>.</p>
 <div style="text-align:center">
 </div>
 <p>El segundo, en conseguir que nuestra navaja suiza, <a href="http://migasfree.org/" target="_blank" rel="noopener noreferrer">migasfree</a>, nos sirviera también para interactuar con equipos Microsoft Windows. A día de hoy, ya tenemos un cliente para esta plataforma que es capaz de inventariar el equipo en el servidor y recoger información sobre el hardware. Próximamente será capaz de instalar/desinstalar software empaquetado. También estamos dedicando esfuerzos en mejorar la usabilidad del servidor y en agilizar el sistema de instalación para que sea más fácil captar usuarios que puedan contribuir a enriquecer más esta aplicación.</p>
@@ -585,8 +585,8 @@
   </entry>
   <entry>
     <title type="text">Software libre, ¿qué es para nosotros?</title>
-    <id>https://azlinux.github.io/posts/2013-04-19-software-libre-para-nosotros.html</id>
-    <link href="https://azlinux.github.io/posts/2013-04-19-software-libre-para-nosotros.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2013-04-19-software-libre-para-nosotros.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2013-04-19-software-libre-para-nosotros.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>Recientemente nos pidieron desde el <a href="http://miriadax.net/" target="_blank" rel="noopener noreferrer">MOOC de Miríada X</a> la realización de un pequeño vídeo sobre nuestro equipo de trabajo... y allá que fuimos.</p>
 ]]></summary>
@@ -609,8 +609,8 @@
   </entry>
   <entry>
     <title type="text">Pese a todo, seguimos ahí</title>
-    <id>https://azlinux.github.io/posts/2015-03-30-pese-a-todo-seguimos-ahi.html</id>
-    <link href="https://azlinux.github.io/posts/2015-03-30-pese-a-todo-seguimos-ahi.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2015-03-30-pese-a-todo-seguimos-ahi.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2015-03-30-pese-a-todo-seguimos-ahi.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<div style="text-align:center">
 <p><img src="/img/beastie-tux-quijote.jpg" alt="AZLinux y sus molinos" title="AZLinux y sus molinos"></p>
@@ -658,8 +658,8 @@
   </entry>
   <entry>
     <title type="text">La frugalidad de AZLinux</title>
-    <id>https://azlinux.github.io/posts/2020-07-24-la-frugalidad-de-azlinux.html</id>
-    <link href="https://azlinux.github.io/posts/2020-07-24-la-frugalidad-de-azlinux.html"/>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2020-07-24-la-frugalidad-de-azlinux.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2020-07-24-la-frugalidad-de-azlinux.html"/>
     <updated>2023-07-17T11:16:21.000Z</updated>
     <summary type="html"><![CDATA[<p>Han pasado más de 5 años desde la <a href="2015-03-30-pese-a-todo-seguimos-ahi">última entrada en esta bitácora</a>. Cinco años que han dado para mucho. Cinco años en los que hemos dado la vuelta a la tortilla, ya que actualmente, el 70% de los ordenadores del Ayuntamiento de Zaragoza tienen un sistema operativo Linux. Cinco años en los que el <a href="https://wiki.vitalinux.educa.aragon.es/" target="_blank" rel="noopener noreferrer">proyecto Vitalinux Edu de la DGA</a>, heredero del germen que supuso <a href="https://es.wikipedia.org/wiki/Vitalinux" target="_blank" rel="noopener noreferrer">Vitalinux</a>, ha nacido y se ha expandido en casi 80 centros educativos de Aragón.</p>]]></summary>
     <content type="html"><![CDATA[<p>Han pasado más de 5 años desde la <a href="2015-03-30-pese-a-todo-seguimos-ahi">última entrada en esta bitácora</a>. Cinco años que han dado para mucho. Cinco años en los que hemos dado la vuelta a la tortilla, ya que actualmente, el 70% de los ordenadores del Ayuntamiento de Zaragoza tienen un sistema operativo Linux. Cinco años en los que el <a href="https://wiki.vitalinux.educa.aragon.es/" target="_blank" rel="noopener noreferrer">proyecto Vitalinux Edu de la DGA</a>, heredero del germen que supuso <a href="https://es.wikipedia.org/wiki/Vitalinux" target="_blank" rel="noopener noreferrer">Vitalinux</a>, ha nacido y se ha expandido en casi 80 centros educativos de Aragón.</p>
