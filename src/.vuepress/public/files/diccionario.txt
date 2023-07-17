@@ -1,0 +1,124 @@
+Accurate		Exacto
+Black                   Negro
+Bond			Continuo
+Check for Driver Updates	Comprobar actualizaciones de Driver
+Cassette		Bandeja
+Collate                 Compilacion
+Controlled by 'Printout Mode'	Controlado por Modo de Impresion
+Custom User Name	Nombre de Usuario Personalizado
+Cyan                    Cian
+Darkest                 Muy Oscuro
+Dark                    Oscuro
+Density                 Densidad
+Destination		Destino
+Device and Supplies Status	Estado del dispositivo y consumibles
+Double-Sided Printing	Impresion a Doble Cara
+Draft			Borrador
+Draft Grayscale		Borrador Escala de Grises
+Duplex			Doble Cara
+Duplex Unit		Unidad de Doble Cara
+Economode		Modo Ahorro
+Enhanced		Mejorado
+Envelope Feeder		Alimentador de Sobres
+FastDraft		Borrador Rapido
+Fit to Page		Ajustar a Pagina
+Flip on Long Edge	Vuelta en lado largo
+Flip on Short Edge	Vuelta en lado corto
+Forms			Formularios
+Full Bleed		Purgado Completo
+Grayscale		Escala de Grises
+Halftoning Algorithm	Algoritmo de Media Tinta
+Highest Quality		Alta Calidad
+High Quality		Alta Calidad
+If Job Name Exists	Si el trabajo existe
+Ink Type		Tipo de tinta
+Installed		Instalada
+InstalledMemory         Memoria Instalada
+Internet Services	Servicios de Internet
+Job Name		Nombre del Trabajo
+Job Storage		Almacenamiento de Trabajos
+Labels			Etiquetas
+Landscape		Orientacion Horizontal
+Large Capacity Tray	Bandeja de Alta Capacidad
+Letterhead		Encabezado
+Levels of Gray		Nivel de Grises
+Light                   Claro
+Lightest                Muy claro
+Long Edge Binding       Lado Largo
+Lower Cassette Units	Unidades Bandeja Inferior
+Lower Tray		Bandeja Inferior
+Magenta                 Magenta
+Mailbox			Buzon de Correo
+Manual Feed 1st Page    Carga Manual Primera Pagina
+Manual Feed Each Page   Carga Manual cada Pagina
+Manual Feed of Paper	Alimentacion Manual del Papel
+Manual Feeder		Alimentador Manual
+Medium                  Medio
+MP Tray                 Bandeja Manual
+Multi Purpose Tray	Bandeja Multiproposito
+Nearest Size and Crop	Tamaño mas cercano y recortar
+Nearest Size and Scale	Tamaño mas cercano y escalar
+Not Installed		No Instalada
+Number of Copies	Numero de Copias
+Online Diagnostic Tools	Herramientas de Diagnostico en Linea
+Order Supplies		Solicitar Consumibles
+Output bin		Compartimiento de salida
+Paper Feed Switch	Interruptor Alimentado de Papel
+Photo			Fotografia
+Photo Paper		Papel Fotografico
+Photo Tray		Bandeja de fotografias
+Plain			Plano
+Plain Paper		Papel Normal
+Plus Glossy		Brillante
+Portrait		Orientacion Vertical
+Preprinted		Preimpreso
+Prepunched		Perforado
+Printer			Impresora
+Printer Hard Disk	Disco Duro en Impresora
+Printers Current Setting	Configuracion de Impresora
+Printer default		Por defecto (Impresora)
+Printout Mode		Modo de Impresion
+Private Job		Trabajo Privado
+Private Stored Job	Trabajo Privado Almacenado
+Product Manuals		Manuales
+Prompt User		Preguntar al Usuario
+Proof			Comprobacion
+Quick Copy		Copia Rapida
+Recycled		Reciclado
+Replace Existing File	Reemplazar Archivo Existente
+Resolution Enhancement	Resolucion Mejorada
+Resolution              Resolucion
+Resolution, Quality, Ink Type, Media Type	Resolucion, Calidad, Tipo de Tinta, Tipo de Papel
+REt Setting		Tecnologia de Resolucion Mejorada
+RITech                  Mejora de resolucion
+Rotate Page 180 deg	Rotar Pagina 180 grados
+Rough			Aspero
+Save Toner		Ahorro de Toner
+Secured Password	Contraseña Segura
+Select the maintenance task you wish to perform			Seleccionar la tarea de mantenimiento a realizar
+Separations             Separaciones
+Short Edge Binding      Lado Corto
+Show me how		Mostrarme como
+Standard Face Down	Cara estandar abajo
+Start Page              Primera Pagina en Blanco
+Support and Troubleshooting	Apoyo y Resolucion de Problemas
+Thick			Grueso
+Thick-N                 Estrecho
+Thick-W                 Grueso
+Toner Density		Densidad de Toner
+Toner Save Mode         Ahorro de Toner
+Transparency		Transparencia
+Tray 			Bandeja
+Unspecified		Sin especificar
+Upper Tray		Bandeja Superior
+Use Document Name	Usar Nombre del Documento
+Use File Sharing Name	Usar Nombre de Archivo Compartido
+Use Job Name		Usar Numero del Trabajo
+User ID			ID de Usuario
+User Name		Nombre de Usuario
+User Password		Contraseña de Usuario
+User Specified Job Name	Usar Nombre del Trabajo Especifico
+Vellum			Pergamino
+Well-Tempered Screening	Selección Bien templada
+Yellow                  Amarillo
+

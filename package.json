@@ -1,0 +1,22 @@
+{
+  "name": "azlinux-blog",
+  "version": "1.0.0",
+  "description": "Bitácora del proyecto AZLinux",
+  "productName": "AZLinux Blog",
+  "author": "Jose Antonio Chavarría <jachavar@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "vuepress": "2.0.0-beta.66",
+    "@vuepress/client": "2.0.0-beta.66",
+    "@vuepress/plugin-search": "2.0.0-beta.66",
+    "prettier": "^3.0.0",
+    "vue": "^3.3.4",
+    "vuepress-theme-hope": "2.0.0-beta.233"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev src",
+    "docs:build": "vuepress build src",
+    "docs:clean-dev": "vuepress dev src --clean-cache",
+    "docs:update-package": "yarn dlx vp-update"
+  }
+}
