@@ -3,7 +3,7 @@ import { searchPlugin } from '@vuepress/plugin-search'
 import theme from './theme.js'
 
 export default defineUserConfig({
-  base: '/',
+  base: '/azlinux.github.io/',
 
   lang: 'es-ES',
   title: 'AZLinux',
