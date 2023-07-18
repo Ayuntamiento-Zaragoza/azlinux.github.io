@@ -3,17 +3,22 @@
   <id>https://azlinux.github.io/azlinux.github.io/</id>
   <title>AZLinux</title>
   <subtitle>Distribución Linux del Ayuntamiento de Zaragoza para los empleados municipales</subtitle>
-  <updated>2023-07-17T11:34:43.104Z</updated>
+  <updated>2023-07-18T12:47:41.305Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://azlinux.github.io/azlinux.github.io/atom.xml"/>
   <link rel="alternate" href="https://azlinux.github.io/azlinux.github.io/"/>
-  <category term="Seguridad"/>
-  <category term="Impresión"/>
+  <category term="Software"/>
+  <category term="Otros"/>
   <category term="Presentación"/>
   <category term="Hardware"/>
   <category term="Desktop"/>
+  <category term="Live CD"/>
+  <category term="Opinión"/>
+  <category term="Evento"/>
+  <category term="Ofimática"/>
+  <category term="Seguridad"/>
+  <category term="Impresión"/>
   <category term="Documentación"/>
-  <category term="Otros"/>
   <category term="Evolución"/>
   <category term="Dificultades"/>
   <contributor>
@@ -22,6 +27,822 @@
   <contributor>
     <name>@jact_abcweb</name>
   </contributor>
+  <contributor>
+    <name>Raúl Huerta</name>
+  </contributor>
+  <entry>
+    <title type="text">Cómo buscamos software</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-10-01-como-buscamos-software.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-10-01-como-buscamos-software.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Cuando buscamos software adecuado para nuestra distribución SLED 10, seguimos siempre la misma ruta:</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Cuando buscamos software adecuado para nuestra distribución SLED 10, seguimos siempre la misma ruta:</p>
+<!-- more -->
+<ol>
+<li>
+<p><strong>Fuentes Novell</strong></p>
+<ul>
+<li>DVD instalación</li>
+<li>DVD update</li>
+<li>Repositorios oficiales</li>
+<li><a href="http://download.novell.com/" target="_blank" rel="noopener noreferrer">Página descargas de Novell</a></li>
+</ul>
+</li>
+<li>
+<p><a href="http://software.opensuse.org/search" target="_blank" rel="noopener noreferrer"><strong>Software OpenSuse</strong></a> (versión SLED/SLES)</p>
+</li>
+<li>
+<p><a href="http://packman.links2linux.org/" target="_blank" rel="noopener noreferrer"><strong>PackMan</strong></a> (versión SLED o, en su defecto, OpenSuse 10.1 o 10.2)</p>
+</li>
+<li>
+<p><a href="http://projectes.lafarga.cat/projects/linkat/downloads/files" target="_blank" rel="noopener noreferrer"><strong>Linkat</strong></a>: Proyecto departamento de Educación de la Generalitat de Cataluña.</p>
+</li>
+<li>
+<p><strong>Web oficial</strong></p>
+<ul>
+<li>RPM para Suse</li>
+<li>Compilar código fuente</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Software"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2009-10-01T11:10:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Cómo clonamos equipos de escritorio</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-10-07-como-clonamos-equipos.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-10-07-como-clonamos-equipos.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Una de las tareas que a diario realizamos es la actualización o instalación de nuevos PCs, para lo que necesitamos una herramienta que permita salvar o recuperar el sistema operativo en pocos minutos. Para ello, utilizamos herramientas de generación de imágenes que permiten clonar y tener dispuesta una máquina en pocos minutos. Hasta ahora habíamos utilizado herramientas como <a href="https://es.wikipedia.org/wiki/Ghost_(software)" target="_blank" rel="noopener noreferrer">Ghost</a> o <a href="https://es.wikipedia.org/wiki/Acronis_True_Image" target="_blank" rel="noopener noreferrer">Acronis</a>, ambas de pago.</p>]]></summary>
+    <content type="html"><![CDATA[<p>Una de las tareas que a diario realizamos es la actualización o instalación de nuevos PCs, para lo que necesitamos una herramienta que permita salvar o recuperar el sistema operativo en pocos minutos. Para ello, utilizamos herramientas de generación de imágenes que permiten clonar y tener dispuesta una máquina en pocos minutos. Hasta ahora habíamos utilizado herramientas como <a href="https://es.wikipedia.org/wiki/Ghost_(software)" target="_blank" rel="noopener noreferrer">Ghost</a> o <a href="https://es.wikipedia.org/wiki/Acronis_True_Image" target="_blank" rel="noopener noreferrer">Acronis</a>, ambas de pago.</p>
+<p>Desde hace unos meses venimos utilizando <a href="http://clonezilla.org/" target="_blank" rel="noopener noreferrer">Clonezilla</a>. <strong>Clonezilla</strong> es software libre bajo licencia GPL y nos permite clonar máquinas con sistemas de archivos diversos: FAT y NTFS de Windows y ext2 y ext3 de Linux entre otros.</p>
+<p>Nuestro montaje consiste en un servidor Linux con Samba donde se almacenan las imágenes. Mediante un <em>Live CD</em> o <em>Live USB</em> con <strong>Clonezilla</strong> como sistema de arranque podemos acceder al servidor Samba para almacenar o recuperar imágenes.</p>
+<div style="text-align:center">
+<p><img src="/img/clonezilla.jpg" alt="Esquema de clonado de imágenes" title="Esquema de clonado de imágenes"></p>
+</div>
+<p>Hasta ahora es un sistema rápido y efectivo que funciona con todos los modelos de tarjeta de red que tenemos. Sin embargo echamos en falta la funcionalidad que permita redimensionar particiones cuando el disco duro es más pequeño que la imagen.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Otros"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2009-10-07T09:17:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Conoce AZLinux. Jornadas sobre Tecnologías Libres de Zaragoza.</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-10-20-conoce-azlinux.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-10-20-conoce-azlinux.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>El próximo miércoles 21 de octubre participamos en las <strong>I Jornadas sobre Tecnologías Libres de Zaragoza</strong>.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>El próximo miércoles 21 de octubre participamos en las <strong>I Jornadas sobre Tecnologías Libres de Zaragoza</strong>.</p>
+<!-- more -->
+<p>Presentaremos, por espacio de 45 minutos, nuestro proyecto de software libre para el Escritorio del funcionario del Ayuntamiento de Zaragoza.</p>
+<ul>
+<li>
+<p>Hora: 19:45</p>
+</li>
+<li>
+<p>Localización: Teatro Romano de Zaragoza, calle San Jorge, 12. Zaragoza</p>
+</li>
+</ul>
+<p>Estáis todos invitados.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2009-10-20T09:01:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Cómo forzar un chequeo de disco</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-10-26-como-forzar-chequeo-disco.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-10-26-como-forzar-chequeo-disco.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Los sistemas Linux, al contrario que los Windows (que hacen el <code>scandisk</code> tras cerrarse anormalmente cuando le viene en gana: unas veces sí y otras no), siempre hacen un chequeo de las particiones, si es necesario, al iniciarse el sistema.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Los sistemas Linux, al contrario que los Windows (que hacen el <code>scandisk</code> tras cerrarse anormalmente cuando le viene en gana: unas veces sí y otras no), siempre hacen un chequeo de las particiones, si es necesario, al iniciarse el sistema.</p>
+<!-- more -->
+<p>De todas formas, se puede forzar el chequeo para el próximo reinicio, si se crea un fichero llamado <code>forcefsck</code> en el directorio raíz. Conviene recordar que no se puede chequear un sistema de archivos que esté montado.</p>
+<p>Este fichero, que inicialmente se creará vacío, puede contener respuestas automáticas para que el chequeo no se pare cada vez que encuentra alguna cosa que falla. Por ejemplo, se puede poner una letra <code>y</code> para que lo haga todo automáticamente.</p>
+<p>Otra particularidad de los Linux es que, de vez en cuando (y sin que nadie se lo pida), chequean aleatoriamente, al arrancar, las particiones de los discos. Esto es así si hace muchos días que no se arranca el equipo o si han pasado más de <em>X</em> días sin haber realizado un chequeo.</p>
+<p>También es posible forzar que no se realice el chequeo en el próximo reinicio. Para ello se crea un fichero denominado <code>fastboot</code> en el directorio raíz.</p>
+<p>Los ficheros <code>forcefsck</code> y <code>fastboot</code> se borran al arrancar el sistema (son de un sólo uso).</p>
+]]></content>
+    <author>
+      <name>@jact_abcweb</name>
+    </author>
+    <category term="Hardware"/>
+    <contributor>
+      <name>@jact_abcweb</name>
+    </contributor>
+    <published>2009-10-26T07:33:00.000Z</published>
+    <rights>Copyright by @jact_abcweb</rights>
+  </entry>
+  <entry>
+    <title type="text">Cómo configurar el servicio NetworkManager en el arranque de openSUSE</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-10-29-como-configurar-networkmanager.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-10-29-como-configurar-networkmanager.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>A diferencia de SLED, en openSUSE, el servicio <strong>NetworkManager</strong>, se ejecuta en segundo plano durante el arranque del sistema. Esto significa que el <em>login</em> gráfico (servicio <code>xdm</code>) está disponible para los usuarios sin tener la seguridad, en esos momentos, de que el equipo tiene la red configurada.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>A diferencia de SLED, en openSUSE, el servicio <strong>NetworkManager</strong>, se ejecuta en segundo plano durante el arranque del sistema. Esto significa que el <em>login</em> gráfico (servicio <code>xdm</code>) está disponible para los usuarios sin tener la seguridad, en esos momentos, de que el equipo tiene la red configurada.</p>
+<!-- more -->
+<p>Como, precisamente, eso es lo que queremos asegurar en ese punto, hay que hacer un par de cambios en la configuración del sistema.</p>
+<p>Para empezar, hay que editar el fichero <code>/etc/init.d/network</code>. En la función <code>start_nm_online</code>, hay que cambiar esta línea:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>por esta otra:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Con esto conseguiremos que el comando <code>nm_online</code> no se ejecute en segundo plano. Es decir, que hasta que no concluya su ejecución, no se continúe con el resto del arranque.</p>
+<p>Pero todavía queda otro problema que resolver. El servicio <code>xdm</code> arranca, en el proceso de arranque, antes de llegar a ejecutar <strong>NetworkManager</strong>. Esto se puede verificar comprobando el fichero <code>/var/log/boot.msg</code>.</p>
+<p>Este comportamiento ocurre porque el sistema intenta (si no hay dependencias entre servicios que lo impidan) arrancar varios servicios en paralelo. Para modificar esta circunstancia, es necesario editar el fichero <code>/etc/sysconfig/boot</code> y cambiar el valor de la variable <code>RUN_PARALLEL</code> a "<strong>no</strong>". Por último, para hacer efectivos los cambios en este archivo, es necesario ejecutar el comando <code>SuSEconfig</code>.</p>
+]]></content>
+    <author>
+      <name>@jact_abcweb</name>
+    </author>
+    <category term="Desktop"/>
+    <contributor>
+      <name>@jact_abcweb</name>
+    </contributor>
+    <published>2009-10-29T13:07:00.000Z</published>
+    <rights>Copyright by @jact_abcweb</rights>
+  </entry>
+  <entry>
+    <title type="text">Nuestra presentación en las Jornadas sobre Tecnologías Libres de Zaragoza</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-11-03-nuestra-presentacion-jornadas-tecnologias-libres.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-11-03-nuestra-presentacion-jornadas-tecnologias-libres.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>El pasado mes de octubre presentamos brevemente nuestro <a href="2009-10-20-conoce-azlinux">proyecto AZLinux dentro de las Jornadas sobre Tecnologías Libres de Zaragoza</a>.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>El pasado mes de octubre presentamos brevemente nuestro <a href="2009-10-20-conoce-azlinux">proyecto AZLinux dentro de las Jornadas sobre Tecnologías Libres de Zaragoza</a>.</p>
+<!-- more -->
+<p>Aquí tenéis <a href="/files/jornadasTL.pdf" target="_blank" rel="noopener noreferrer">la presentación</a>.</p>
+<div style="text-align:center">
+</div>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2009-11-03T07:33:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Cómo hacemos ssh múltiple</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2009-11-16-como-hacemos-ssh-multiple.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2009-11-16-como-hacemos-ssh-multiple.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>En algunos entornos es útil poder realizar acciones en varias máquinas simultáneamente.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>En algunos entornos es útil poder realizar acciones en varias máquinas simultáneamente.</p>
+<!-- more -->
+<p><a href="https://www.redeszone.net/2017/03/04/parallel-ssh-conoce-la-herramienta-pssh-conectarnos-varios-servidores-ssh-la-vez/" target="_blank" rel="noopener noreferrer">pssh</a> permite conectarse mediante <code>ssh</code> a varias máquinas y realizar una acción única en todas ellas simultáneamente.</p>
+<p>Para nuestra aula de formación, esta funcionalidad es muy interesante. Por ejemplo, deseamos borrar el perfil del usuario <em>curso</em> (<em>home</em> incluido) cada vez que acaba un curso en cada una de las máquinas del aula.</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Además <code>pssh</code> incluye, como podéis ver en el enlace, otro conjunto interesante de comandos muy útiles como <code>pscp</code>, <code>prsync</code>, <code>pnuke</code> y <code>pslurt</code>.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Desktop"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2009-11-16T13:15:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">AZLinux estará en WhyFLOSS Madrid 2010</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-01-11-azlinux-whyfloss-madrid.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-01-11-azlinux-whyfloss-madrid.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>En el mes de mayo de este año se realizará la <strong>7ta edición de la WhyFLOSS Conference</strong>, con entrada <strong>libre y gratuita</strong> y con <strong>certificados de asistencia y ponencia</strong>. Un evento internacional organizado por <strong>Neurowork</strong> que se realiza en España y Argentina y que esta vez se realizará por segunda vez en la ciudad de Madrid.</p>]]></summary>
+    <content type="html"><![CDATA[<p>En el mes de mayo de este año se realizará la <strong>7ta edición de la WhyFLOSS Conference</strong>, con entrada <strong>libre y gratuita</strong> y con <strong>certificados de asistencia y ponencia</strong>. Un evento internacional organizado por <strong>Neurowork</strong> que se realiza en España y Argentina y que esta vez se realizará por segunda vez en la ciudad de Madrid.</p>
+<p>Con un importante apoyo de la <strong>Universidad Carlos III</strong>, <strong>campus Leganés</strong> y el <strong>Grupo de Usuarios de Linux UC3M</strong>, se presentarán conferencias variadas entorno a las tecnologías abiertas de IT.</p>
+<p>AZLinux estará presente en una de las conferencias.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2010-01-11T07:28:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Pasamos a OpenOffice 3.1</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-03-08-pasamos-openoffice-3.1.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-03-08-pasamos-openoffice-3.1.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<div style="text-align:center">
+<p><img src="/img/OpenOffice.org.svg" alt="OpenOffice" title="OpenOffice"></p>
+</div>
+<p>En la últimas semanas hemos realizado la actualización progresiva de la plataforma ofimática. Actualizamos a OO3.1 desde OO2.3. No ha sido sencillo ya que los perfiles de usuario debían mantenerse intactos y no perder macros, diccionarios o autotextos. Creo que lo hemos conseguido.</p>
+]]></summary>
+    <content type="html"><![CDATA[<div style="text-align:center">
+<p><img src="/img/OpenOffice.org.svg" alt="OpenOffice" title="OpenOffice"></p>
+</div>
+<p>En la últimas semanas hemos realizado la actualización progresiva de la plataforma ofimática. Actualizamos a OO3.1 desde OO2.3. No ha sido sencillo ya que los perfiles de usuario debían mantenerse intactos y no perder macros, diccionarios o autotextos. Creo que lo hemos conseguido.</p>
+<!-- more -->
+<p>Enhorabuena a los chicos del equipo <strong>escritorio SL</strong> del Ayuntamiento de Zaragoza.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Software"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2010-03-08T07:39:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Tecnimap 2010</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-03-11-tecnimap-2010.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-03-11-tecnimap-2010.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<div style="text-align:center">
+<p><img src="/img/tecnimap.jpg" alt="Tecnimap 2010" title="Tecnimap 2010"></p>
+</div>
+<p>Del 6 al 9 de abril se celebra el Zaragoza <a href="http://www.tecnimap.es/" target="_blank" rel="noopener noreferrer">TECNIMAP</a>.</p>
+<p><strong>XI Jornadas sobre Tecnologías de la Información para la Modernización de las Administraciones Públicas</strong></p>]]></summary>
+    <content type="html"><![CDATA[<div style="text-align:center">
+<p><img src="/img/tecnimap.jpg" alt="Tecnimap 2010" title="Tecnimap 2010"></p>
+</div>
+<p>Del 6 al 9 de abril se celebra el Zaragoza <a href="http://www.tecnimap.es/" target="_blank" rel="noopener noreferrer">TECNIMAP</a>.</p>
+<p><strong>XI Jornadas sobre Tecnologías de la Información para la Modernización de las Administraciones Públicas</strong></p>
+<p>TECNIMAP es el principal encuentro europeo que reúne a representantes del ámbito de las tecnologías de la información y las telecomunicaciones de las distintas Administraciones Públicas, las principales empresas del sector y a muy diversos expertos relacionados con este campo. <strong>Se trata de un importante espacio de intercambio de experiencias, ideas y proyectos en materia de tecnologías de la información y servicios públicos.</strong></p>
+<p>Dentro del <em>stand</em> del <a href="https://zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a> en <a href="https://www.feriazaragoza.es/" target="_blank" rel="noopener noreferrer">Feria de Zaragoza</a>, AZLinux tendrá una presencia importante. Invitamos a los asistentes a conocer nuestro proyecto durante las charlas programadas en nuestro aula o con explicaciones sobre la marcha.</p>
+<p>Os esperamos.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2010-03-11T07:43:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Cómo modificar un Live CD de openSUSE y convertirlo en un Live USB</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-03-23-como-modificar-live-cd.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-03-23-como-modificar-live-cd.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p><a href="https://www.opensuse.org/" target="_blank" rel="noopener noreferrer">openSUSE</a> proporciona una herramienta para construir distribuciones personalizadas basadas en su producto y que también permite que estén disponibles en diferentes formatos (<em>Live CD</em>, <em>USB stick</em>, <em>VMWare virtual machine</em>...). El programa que posibilita todo esto se llama <a href="https://en.opensuse.org/Portal:Kiwi" target="_blank" rel="noopener noreferrer">kiwi</a> y se puede probar toda versatilidad y potencia dentro del <a href="https://studioexpress.opensuse.org/" target="_blank" rel="noopener noreferrer">proyecto suseStudio</a>.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><a href="https://www.opensuse.org/" target="_blank" rel="noopener noreferrer">openSUSE</a> proporciona una herramienta para construir distribuciones personalizadas basadas en su producto y que también permite que estén disponibles en diferentes formatos (<em>Live CD</em>, <em>USB stick</em>, <em>VMWare virtual machine</em>...). El programa que posibilita todo esto se llama <a href="https://en.opensuse.org/Portal:Kiwi" target="_blank" rel="noopener noreferrer">kiwi</a> y se puede probar toda versatilidad y potencia dentro del <a href="https://studioexpress.opensuse.org/" target="_blank" rel="noopener noreferrer">proyecto suseStudio</a>.</p>
+<!-- more -->
+<p>Sin embargo, para hacer unos cambios rápidos sobre la versión <a href="https://old-en.opensuse.org/Derivatives" target="_blank" rel="noopener noreferrer">Live CD oficial de openSUSE</a> no es necesario usar esa aplicación. A continuación explicaremos los pasos seguidos para realizar una personalización rápida.</p>
+<p>Para empezar, vamos a comentar los cambios que queremos hacer sobre la distribución base:</p>
+<ul>
+<li>En el sistema de arranque:
+<ul>
+<li>Cambiar el idioma (por defecto muestra el inglés y lo queremos cambiar a español).</li>
+<li>Cambiar el fondo gráfico.</li>
+</ul>
+</li>
+<li>En el sistema operativo:
+<ul>
+<li>Cambiar el idioma (a español).</li>
+<li>Cambiar la configuración del teclado.</li>
+<li>Mostrar otro fondo de escritorio en la sesión gráfica del usuario.</li>
+<li>Desactivar las actualizaciones automáticas (ya que el sistema es de sólo lectura).</li>
+</ul>
+</li>
+</ul>
+<h2> Qué hay dentro de una imagen ISO de openSUSE</h2>
+<p>El primer paso, después de bajar la imagen ISO de openSUSE para Live CD (la 11.2), es descomprimir el fichero. Dicho archivo contiene los ficheros del sistema de arranque y un gran archivo que contiene el sistema de ficheros de la distribución. Este archivo, que necesitamos descomprimir para modificar ciertos parámetros del sistema, está en formato <em>clicfs</em> y dentro contiene otro fichero, llamado <code>fsdata.ext3</code>, que deberemos montar para acceder a los archivos reales. Necesitaremos tener instalado el paquete clicfs para descomprimir dicho formato.</p>
+<p>Resumiendo, para realizar las operaciones descritas, las órdenes a ejecutar serían:</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>El fichero <code>fsdata.ext3</code> que aparece al descomprimir el contenedor <em>clicfs</em>, no tiene espacio libre. Esto significa que no se podrá modificar ningún fichero porque no hay espacio disponible para hacer una copia temporal. La solución es dar algo de espacio libre. Habrá que redimensionar el sistema de archivos:</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Con esto, dentro del directorio <code>/mnt</code> tendremos, en modo lectura y escritura, el sistema de ficheros de la distribución para poderlo modificar.</p>
+<h2> Cambio de idioma, teclado, fondo de escritorio y actualizaciones automáticas</h2>
+<p>Para cambiar el idioma a español, habrá que editar el fichero <code>/mnt/etc/sysconfig/language</code> (como usuario <code>root</code>) y modificar la variable <code>RC_LANG</code>:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Si se quiere cambiar también el idioma para el usuario <code>root</code>, se debe actualizar el valor de la variable <code>ROOT_USES_LANG</code>:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Ya que hemos cambiado el idioma, también es recomendable cambiar el mapeo del teclado. En este caso, hay que editar el fichero <code>/mnt/etc/sysconfig/keyboard</code> y modificar la variable <code>KEYTABLE</code> (como usuario <code>root</code>):</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>El fondo de escritorio por defecto, se encuentra en el archivo <code>/mnt/usr/share/wallpapers/openSUSE112-1600x1200.png</code>, por lo que podemos cambiarla por otra fotografía que respete las dimensiones y formato del original.</p>
+<p>Para desactivar las actualizaciones automáticas, es necesario crear el fichero <code>/mnt/etc/sysconfig/automatic_online_update</code>, con el siguiente contenido:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Una vez hechos los cambios, si desmontamos el directorio <code>/mnt</code>, dentro del fichero <code>/tmp/clicfs/fsdata.ext3</code> estarán conservadas nuestras modificaciones. Tan sólo tenemos que recomprimir el fichero en formato <em>clicfs</em> y dejarlo en la ubicación original para completar esta fase del trabajo:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>Le aplicamos el máximo nivel de compresión (el 9) para conseguir que quepa en un CD de 700 MB. Sólo hay que copiarlo en la ubicación original para luego rehacer la imagen ISO:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> Cambios en el sistema de arranque</h2>
+<p>Para cambiar el idioma en el que se presenta el gestor de arranque de la imagen ISO, lo haremos con el comando <a href="https://en.opensuse.org/SDB:Gfxboot" target="_blank" rel="noopener noreferrer">gfxboot</a>.</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Esto hace que cambie el contenido del fichero <code>boot/loader/i386/loader/bootlogo</code>. A su vez, este archivo contiene otro, llamado <code>init</code>, que es donde se realizan dichos cambios.</p>
+<p>Por último, para cambiar la imagen de fondo del arranque, copiaremos la nueva foto en el directorio <code>/tmp/iso/openSUSE-11.2-GNOME-LiveCD-i686/boot/i386/loader</code> con los nombres <code>back.jpg</code> y <code>welcome.jpg</code>. Eso sí, la nueva foto deberá mantener el mismo formato y dimensiones que las originales. Después, ejecutaremos este comando:</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> Rehacer la imagen ISO</h2>
+<p>Con el comando <code>mkisofs</code> podremos compilar los ficheros para obtener de nuevo una imagen ISO para poder planchar en un CD. Este comando tiene múltiples argumentos, pero sólo usaremos algunos de ellos.</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>El punto del final del comando se refiere al directorio actual, lo que significa que hará una ISO con todo lo que haya en dicho directorio. Habrá que revisar el directorio y dejar sólamente lo estrictamente necesario antes de empaquetar la imagen ISO.</p>
+<h2> Convertir en una imagen Live USB</h2>
+<p>Aunque el resultado que se puede conseguir no es el de una imagen <em>Live USB</em> total, porque sólo se podrá escribir con persistencia en la partición de <code>home</code>, puede venir bien para aprovechar el trabajo y matar dos pájaros de un tiro (una misma imagen para dispositivos diferentes: CD y USB).</p>
+<p>Lo primero es conseguir que la imagen ISO también sea capaz de arrancar en un dispositivo USB. Para ello, existe un comando, llamado <code>isohybrid</code> (dentro del paquete <code>syslinux</code>), que hará esta parte del proceso. Sin embargo, la documentación sobre el comando es bastante escasa. No basta con ejecutar el comando y pasar la ruta de la imagen ISO como parámetro para conseguir el objetivo. Es necesario que el identificador del sistema de arranque sea el mismo que espera la imagen ISO como dispositivo de arranque. Dicha información se halla en el fichero <code>/tmp/iso/openSUSE-11.2-GNOME-LiveCD-i686/boot/grub/mbrid</code>.</p>
+<p>A falta de documentación sobre este tema, la solución se encuentra dentro del fichero <code>/usr/share/kiwi/modules/KIWIIsoLinux.pm</code>, que forma parte del paquete <strong>kiwi</strong> de openSUSE. Una vez que sabemos el identificador del MBR que espera encontrar la imagen ISO, la orden que debemos ejecutar es la siguiente:</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Esta nueva imagen ISO ya se puede planchar en un dispositivo USB con, por ejemplo, el comando <code>dd</code>, o el comando <code>imagewriter</code> (que pertenece al paquete <code>kiwi-tools-imagewriter</code>).</p>
+<p>La segunda parte del proceso se reduce a aprovechar el espacio restante en el USB como partición de <code>home</code>, en la que se pueda leer y escribir y obtener así persistencia. Dicho proceso lo podemos llevar a cabo con el comando <code>fdisk</code>. En la <a href="https://en.opensuse.org/SDB:Live_USB_stick" target="_blank" rel="noopener noreferrer">página Live USB stick</a> se puede obtener más información sobre el tema.</p>
+<h2> Referencias</h2>
+<ul>
+<li><a href="https://old-en.opensuse.org/SuSE_install_from_USB_drive" target="_blank" rel="noopener noreferrer">SuSE install from USB drive</a></li>
+</ul>
+<h2> Actualización 2010-03-30</h2>
+<p>Si se resiste la desactivación de la actualización automática, es recomendable borrar el fichero <code>/mnt/etc/xdg/autostart/gpk-update-icon.desktop</code>, para evitar que se lance el proceso en el inicio de la sesión gráfica.</p>
+]]></content>
+    <author>
+      <name>@jact_abcweb</name>
+    </author>
+    <category term="Desktop"/>
+    <category term="Live CD"/>
+    <contributor>
+      <name>@jact_abcweb</name>
+    </contributor>
+    <published>2010-03-23T13:41:00.000Z</published>
+    <rights>Copyright by @jact_abcweb</rights>
+  </entry>
+  <entry>
+    <title type="text">Sensaciones TECNIMAP 2010</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-04-12-sensaciones-tecnimap-2010.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-04-12-sensaciones-tecnimap-2010.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Esto acabó, pero mi sensación es "estamos empezando".</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Esto acabó, pero mi sensación es "estamos empezando".</p>
+<!-- more -->
+<p>TECNIMAP 2010 nos permitió dar a conocer nuestro <strong>proyecto de Escritorio Software Libre para el Ayuntamiento de Zaragoza</strong>. Llevamos 5 años trabajando para que esto sea una realidad y poco a poco lo vamos consiguiendo. Lo vamos consiguiendo no sin esfuerzo y sinsabores, con el esfuerzo diario de nuestros técnicos. Para ellos vaya mi sincero agredecimiento.</p>
+<p>TECNIMAP 2010 nos permitió constatar que muchas administraciones lo tienen claro, el camino del Escritorio se recorre en direccion al Software Libre. Desde Andalucía, Valencia, Canarias, Huesca, Guadalajara, Galicia, Málaga, Asturias, Cantabria, Madrid, País Vasco y muchos otros que ya no puedo recordar hemos encontrado mucho intereses por recorrer este camino que nosotros empezamos hace un tiempo. Nos gustaría dar un poco de nuestra luz a este camino penumbroso en muchos de sus tramos.</p>
+<p>TECNIMAP 2010 nos permitió constatar que el camino del Escritorio Software Libre es viable y además, rentable social y económicamente. Pero no olvidemos que, como casi todo en la vida, para llegar al éxito es necesario disponer de recursos y organización.</p>
+<p><a href="mailto:azlinux@zaragoza.es">Aquí estamos para lo que necesitéis</a>.</p>
+<blockquote>
+<p>Eduardo Romero Moreno</p>
+</blockquote>
+<blockquote>
+<p>Servicio de Redes y Sistemas</p>
+</blockquote>
+<blockquote>
+<p>Ayuntamiento de Zaragoza</p>
+</blockquote>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Opinión"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2010-04-12T00:09:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Ponencia en el Gnome 3.0 Marketing Hackfest</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-05-19-ponencia-gnome-marketing-hackfest.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-05-19-ponencia-gnome-marketing-hackfest.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>El pasado día 7 de mayo, tuvimos la oportunidad de presentar <a href="/files/gnome-marketing-hackfest_2010-05-07.zip" target="_blank" rel="noopener noreferrer">nuestro proyecto de migración a software libre</a>, dentro del <a href="https://wiki.gnome.org/Hackfests/Marketing-2010-05" target="_blank" rel="noopener noreferrer">Gnome 3.0 Marketing Hackfest</a>.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>El pasado día 7 de mayo, tuvimos la oportunidad de presentar <a href="/files/gnome-marketing-hackfest_2010-05-07.zip" target="_blank" rel="noopener noreferrer">nuestro proyecto de migración a software libre</a>, dentro del <a href="https://wiki.gnome.org/Hackfests/Marketing-2010-05" target="_blank" rel="noopener noreferrer">Gnome 3.0 Marketing Hackfest</a>.</p>
+<!-- more -->
+<p>Dicho evento se celebró en el <a href="http://www.ita.es/" target="_blank" rel="noopener noreferrer">Instituto Tecnológico de Aragón</a>. Entre los patrocinadores de las jornadas se encontraba el propio <a href="http://www.zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a>, además de <a href="https://es.wikipedia.org/wiki/Asolif" target="_blank" rel="noopener noreferrer">ASOLIF</a>, <strong>CESLA</strong> y el <strong>ITA</strong>, y fue un placer conocer a personas tan importantes dentro del entorno <a href="https://foundation.gnome.org/" target="_blank" rel="noopener noreferrer">Gnome</a> como <a href="https://www.vuntz.net/" target="_blank" rel="noopener noreferrer">Vincent Untz</a> y <a href="http://stormyscorner.com/" target="_blank" rel="noopener noreferrer">Stormy Peters</a>.</p>
+]]></content>
+    <author>
+      <name>@jact_abcweb</name>
+    </author>
+    <category term="Presentación"/>
+    <category term="Evento"/>
+    <contributor>
+      <name>@jact_abcweb</name>
+    </contributor>
+    <published>2010-05-19T08:23:00.000Z</published>
+    <rights>Copyright by @jact_abcweb</rights>
+  </entry>
+  <entry>
+    <title type="text">AZLinux en OSOR</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-10-04-azlinux-en-osor.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-10-04-azlinux-en-osor.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>OSOR es el acrónimo de <em>Open Source Observatory and Repository</em> para la administración pública Europea y se divide principalmente en dos componentes:</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>OSOR es el acrónimo de <em>Open Source Observatory and Repository</em> para la administración pública Europea y se divide principalmente en dos componentes:</p>
+<!-- more -->
+<ul>
+<li>
+<p>La plataforma de información destinada a las administraciones públicas se suministran noticias, guías, enlaces, contactos, etc.</p>
+</li>
+<li>
+<p>El repositorio o entorno de desarrollo colaborativo es un almacén de software (fuente y compilado), documentación y conocimiento fácilmente accesible de acuerdo a varias clasificaciones como el sector o el idioma origen</p>
+</li>
+</ul>
+<p>OSOR realizó en junio de 2010 un entrevista con los representantes del proyecto <strong>AZLinux</strong> del <a href="http://www.zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a>: <a href="https://joinup.ec.europa.eu/collection/open-source-observatory-osor/news/es-zaragozas-move-comple" target="_blank" rel="noopener noreferrer">Zaragoza's move to complete open source desktop going to plan</a>.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2010-10-04T08:41:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Foro de Experiencias en Migración en las Administraciones Públicas</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-10-04-foro-experiencias-migracion.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-10-04-foro-experiencias-migracion.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>La <a href="https://es.wikipedia.org/wiki/CENATIC" target="_blank" rel="noopener noreferrer">Fundación CENATIC</a> (Centro Nacional de Referencia de Aplicación de las TIC basadas en fuentes abiertas), con el apoyo del <a href="http://www.zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a>, Caja Guadalajara y la <a href="https://www.emergya.com/" target="_blank" rel="noopener noreferrer">empresa Emergya</a> han organizado el <strong>I Intercambio de experiencias en materia de migración a fuentes abiertas</strong>, que se desarrolló el pasado 14 de julio en la sede de Caja Guadalajara. La jornada contó con la participación de los responsables de los proyectos de migración más destacados en España, y mostraron los beneficios, retos y barreras superadas en su experiencia real de migración a software libre en el ámbito de la administración y de la empresa.</p>]]></summary>
+    <content type="html"><![CDATA[<p>La <a href="https://es.wikipedia.org/wiki/CENATIC" target="_blank" rel="noopener noreferrer">Fundación CENATIC</a> (Centro Nacional de Referencia de Aplicación de las TIC basadas en fuentes abiertas), con el apoyo del <a href="http://www.zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a>, Caja Guadalajara y la <a href="https://www.emergya.com/" target="_blank" rel="noopener noreferrer">empresa Emergya</a> han organizado el <strong>I Intercambio de experiencias en materia de migración a fuentes abiertas</strong>, que se desarrolló el pasado 14 de julio en la sede de Caja Guadalajara. La jornada contó con la participación de los responsables de los proyectos de migración más destacados en España, y mostraron los beneficios, retos y barreras superadas en su experiencia real de migración a software libre en el ámbito de la administración y de la empresa.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2010-10-04T08:10:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">500 PCs en Linux</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2010-11-04-500-linux.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-11-04-500-linux.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<div style="text-align:center">
+<p><img src="/img/500-linux.jpg" alt="500 PCs en Linux" title="500 PCs en Linux"></p>
+</div>
+<p>Hemos llegado a 500 ordenadores con Linux.</p>
+]]></summary>
+    <content type="html"><![CDATA[<div style="text-align:center">
+<p><img src="/img/500-linux.jpg" alt="500 PCs en Linux" title="500 PCs en Linux"></p>
+</div>
+<p>Hemos llegado a 500 ordenadores con Linux.</p>
+<!-- more -->
+<p>Parecía imposible pero, poco a poco, vamos avanzando. Ya sólo nos quedan... 2.300, ¡¡uffff!!</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Software"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2010-11-04T09:41:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">AZLinux en Twitter</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-01-25-azlinux-en-twitter.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-01-25-azlinux-en-twitter.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>El equipo de AZLinux inicia una nueva experiencia en el uso de redes sociales. Usaremos twitter para relatar nuestro trabajo diario, nuestras preocupaciones y nuestras lecciones aprendidas.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>El equipo de AZLinux inicia una nueva experiencia en el uso de redes sociales. Usaremos twitter para relatar nuestro trabajo diario, nuestras preocupaciones y nuestras lecciones aprendidas.</p>
+<!-- more -->
+<p>Nuestra cuenta es <a href="http://twitter.com/#!/azlinuxzgz" target="_blank" rel="noopener noreferrer">@azlinuxzgz</a>.</p>
+<p>Estáis invitados a seguirnos y dialogar con nosotros.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2011-01-25T22:48:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Macros OpenOffice I: Contenido Calc a hipervínculo</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-02-07-macros-openoffice-i.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-02-07-macros-openoffice-i.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Coge una columna seleccionada y la transforma en vínculos:</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Coge una columna seleccionada y la transforma en vínculos:</p>
+<!-- more -->
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <author>
+      <name>Raúl Huerta</name>
+    </author>
+    <category term="Ofimática"/>
+    <contributor>
+      <name>Raúl Huerta</name>
+    </contributor>
+    <published>2011-02-07T12:41:00.000Z</published>
+    <rights>Copyright by Raúl Huerta</rights>
+  </entry>
+  <entry>
+    <title type="text">Macros OpenOffice II: Manejo de columnas en Calc</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-02-10-macros-openoffice-ii.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-02-10-macros-openoffice-ii.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Maneja columnas: elimina, corta, pega e inserta columnas, inserta cabeceras hasta dar el formato apropiado.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Maneja columnas: elimina, corta, pega e inserta columnas, inserta cabeceras hasta dar el formato apropiado.</p>
+<!-- more -->
+<p>El programa realiza lo siguiente:</p>
+<ul>
+<li>Eliminar columnas E y N (originales)</li>
+<li>Insertar columna entre la C y la D</li>
+<li>La columna G la cortamos y la pegamos en la nueva D</li>
+<li>Eliminamos la columna G</li>
+<li>Insertamos dos columnas delante de la A</li>
+<li>Cortamos las columnas M y N y las pegamos en la A y B</li>
+<li>Cortamos las columnas I y J y las pegamos en la M y N</li>
+<li>Eliminamos las columnas I y J.</li>
+</ul>
+<p>y</p>
+<p>Cabeceras:</p>
+<ul>
+<li>MOD / AUTOLIQ / CLAVE / RECIBO / D/ CUOTA / ORD / NFIJO / NOMBRE / DNI / TIPO / SUBTIPO</li>
+</ul>
+<h2> Programa principal</h2>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Procedimiento CopiaColumna</h2>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Procedimiento InsertaCabecera</h2>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Procedimiento OrdenarPorColumna</h2>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Procedimiento AjustaAnchoColumna</h2>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <author>
+      <name>Raúl Huerta</name>
+    </author>
+    <category term="Ofimática"/>
+    <contributor>
+      <name>Raúl Huerta</name>
+    </contributor>
+    <published>2011-02-10T08:29:00.000Z</published>
+    <rights>Copyright by Raúl Huerta</rights>
+  </entry>
+  <entry>
+    <title type="text">Modificando una extensión de OpenOffice</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-02-11-modificando-extension-openoffice.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-02-11-modificando-extension-openoffice.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p><a href="https://extensions.openoffice.org/en/project/numbertext" target="_blank" rel="noopener noreferrer">Numbertext</a> es una extensión de OpenOffice que proporciona dos nuevas funciones para <strong>Calc</strong>: <code>Numbertext</code> y <code>Moneytext</code> que traducen un valor númerico en texto (<code>Numbertext</code>) o en texto moneda: X euros y X cents (<code>Moneytext</code>). El problema que nos comenta el usuario es que quiere que la función <code>Moneytext</code>, en vez de "X euro/s y X cent/s", dé como resultado "X euro/s con X céntimo/s".</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><a href="https://extensions.openoffice.org/en/project/numbertext" target="_blank" rel="noopener noreferrer">Numbertext</a> es una extensión de OpenOffice que proporciona dos nuevas funciones para <strong>Calc</strong>: <code>Numbertext</code> y <code>Moneytext</code> que traducen un valor númerico en texto (<code>Numbertext</code>) o en texto moneda: X euros y X cents (<code>Moneytext</code>). El problema que nos comenta el usuario es que quiere que la función <code>Moneytext</code>, en vez de "X euro/s y X cent/s", dé como resultado "X euro/s con X céntimo/s".</p>
+<!-- more -->
+<p>La extensión <code>numbertext-version.oxt</code> es un fichero comprimido que consta de una estructura de ficheros y directorios entre los que se encuentra el archivo <code>numbertext_es_ES.py</code>. Este fichero contiene el código <em>python</em> con las funciones de <strong>Calc</strong> y es el que hay que modificar de la siguiente manera:</p>
+<ul>
+<li>La línea 87 <code>cent</code> por <code>céntimo</code> y <code>cents</code> por <code>céntimos</code>.</li>
+<li>Las líneas 117, 118 y 119 donde pone <code>y</code> por <code>con</code>.</li>
+</ul>
+<p>¡¡Así de fácil!!</p>
+]]></content>
+    <author>
+      <name>Raúl Huerta</name>
+    </author>
+    <category term="Ofimática"/>
+    <contributor>
+      <name>Raúl Huerta</name>
+    </contributor>
+    <published>2011-02-11T12:27:00.000Z</published>
+    <rights>Copyright by Raúl Huerta</rights>
+  </entry>
+  <entry>
+    <title type="text">Macros OpenOffice III: Distribuir filas equitativamente</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-02-16-macros-openoffice-iii.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-02-16-macros-openoffice-iii.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Módulo de macros de <strong>Writer</strong> (OpenOficce) que soluciona un error de interpretación en la opción <strong>Tabla -&gt; Autoajustar -&gt; Distribuir Filas Equitativamente</strong>.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Módulo de macros de <strong>Writer</strong> (OpenOficce) que soluciona un error de interpretación en la opción <strong>Tabla -&gt; Autoajustar -&gt; Distribuir Filas Equitativamente</strong>.</p>
+<!-- more -->
+<p>En <strong>Word</strong> funcionaba de la siguiete manera: si seleccionas varias filas de diferente altura y eliges esta opción, no modifica la altura de la tabla y redistribuye el espacio equitativamente entre las filas seleccionadas. Sin embargo, con OpenOffice coge la altura de la fila más alta y lo aplica al resto.</p>
+<p>Hay abierta una <a href="http://qa.openoffice.org/issues/show_bug.cgi?id=58326" target="_blank" rel="noopener noreferrer">issue en OpenOffice</a> de la cual extraemos una macro alternativa que sustituye a la opción <strong>Distribuir Filas Equitativamente</strong> en OO.</p>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <author>
+      <name>Raúl Huerta</name>
+    </author>
+    <category term="Ofimática"/>
+    <contributor>
+      <name>Raúl Huerta</name>
+    </contributor>
+    <published>2011-02-16T10:01:00.000Z</published>
+    <rights>Copyright by Raúl Huerta</rights>
+  </entry>
+  <entry>
+    <title type="text">OpenDNIe en AZLinux</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-02-16-opendnie-en-azlinux.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-02-16-opendnie-en-azlinux.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Hace unos días, <a href="https://rebelion.org/opendnie-un-driver-libre-para-una-ciudadania-libre/" target="_blank" rel="noopener noreferrer">se presentó el proyecto OpenDNIe en sociedad</a>. Este proyecto significa un gran avance para las administraciones públicas que quieran usar Linux, ya que inicia el camino de la independencia tecnológica.</p>]]></summary>
+    <content type="html"><![CDATA[<p>Hace unos días, <a href="https://rebelion.org/opendnie-un-driver-libre-para-una-ciudadania-libre/" target="_blank" rel="noopener noreferrer">se presentó el proyecto OpenDNIe en sociedad</a>. Este proyecto significa un gran avance para las administraciones públicas que quieran usar Linux, ya que inicia el camino de la independencia tecnológica.</p>
+<p>Intentaré explicar esto más detenidamente. Actualmente, los 2 módulos criptográficos que se usan en la Administración Pública Española no están integrados en el <a href="http://opensc-project.org/" target="_blank" rel="noopener noreferrer">proyecto OpenSC</a>, sino que son módulos cargables que viven vidas paralelas a este <em>proyecto madre</em>. Esto implica que cada vez que OpenSC actualiza algo (aunque sólo sea el número de la versión), los módulos españoles dejan de funcionar. Otro problema añadido es que ambos deben estar compilados contra la misma versión de OpenSC para funcionar en la misma máquina.</p>
+<p>La situación se estaba tornando insostenible y estaba impidiendo que las nuevas versiones de las distribuciones Linux tuvieran soporte para estos módulos. Como <em>solución</em>, tanto la  (DNIe) como la  (Ceres) liberaron hace unos meses los respectivos proyectos. Pero era necesario que alguien hiciera el trabajo de integración en opensc para que la dependencia de versiones dejara de ser un problema.</p>
+<p>Gracias a <a href="http://juansgaviota.blogspot.com/" target="_blank" rel="noopener noreferrer">jonsito</a> y Cenatic, <a href="https://www.dnielectronico.es/PortalDNIe/" target="_blank" rel="noopener noreferrer">la integración del DNIe</a> es ya una realidad, pero todavía queda integrar Ceres en OpenSC para conseguir resolver completamente el problema. Si ambos módulos no están dentro de opensc, la gente que ha adoptado Linux como plataforma de trabajo, no puede continuar avanzando y proporcionar servicios a los ciudadanos.</p>
+<div style="text-align:center">
+<p><img src="/img/opensc.png" alt="Mapa mental módulos criptográficos" title="Mapa mental módulos criptográficos"></p>
+</div>
+<p>Este mapa mental representa el pasado, presente y futuro de los módulos criptográficos en nuestro trabajo diario. Hicimos una primera versión de AZLinux (la 1, basada en SLED 10), en la que sólo teníamos soporte para Ceres por el problema de encontrar una versión de opensc que hiciera funcionar ambos módulos. Luego pasamos a openSUSE 11.2 (AZLinux 2) y conseguimos dar con la fórmula correcta gracias a la suerte y al trabajo desinteresado de <a href="https://download.opensuse.org/repositories/home:/RedDwarf:/" target="_blank" rel="noopener noreferrer">RedDwarf</a>. A día de hoy no nos podemos ni plantear evolucionar la versión de openSUSE porque ni el código de la DGP ni el de la FNMT están preparados para funcionar con <strong>opensc-0.12</strong>.</p>
+<p>En cuanto hemos sabido que existía opendnie, nos hemos puesto manos a la obra para hacerlo funcionar en nuestra actual plataforma (openSUSE 11.2). A continuación os relato las dependencias necesarias para su compilación y de dónde se han obtenido cada una de ellas.</p>
+<ul>
+<li>gcc gcc-c++ kernel-devel (kernel-pae-devel en nuestro caso)</li>
+<li>pkg-config</li>
+<li>autoconf</li>
+<li>automake</li>
+<li>docbook-xsl-stylesheets</li>
+<li>pcsc-lite, pcsc-lite-devel</li>
+<li>pcsc-ccid</li>
+<li>libreadline6, readline-devel</li>
+<li>libgpg-error-devel</li>
+<li>openssl, libopenssl0_9_8, libopenssl-devel</li>
+<li>pinentry, pinentry-gtk2, pinentry-qt4</li>
+<li>libtool, libltdl7</li>
+<li>openct, openct-devel, pcsc-openct, libopenct1</li>
+<li>libpth20, libpth-devel</li>
+<li>libassuan0, libassuan-devel</li>
+</ul>
+<p>Todos los paquetes corresponden al repositorio <strong>openSUSE 11.2 standard</strong>, excepto la siguiente lista, que han sido obtenidos de otro repositorio, porque el paquete <code>libassuan0</code> no está en el repositorio <em>standard</em>.</p>
+<ul>
+<li>libassuan-devel-2.0.0-4.1.i586.rpm</li>
+<li>libassuan0-2.0.0-4.1.i586.rpm</li>
+</ul>
+<p>El DNIe funciona perfectamente con la <a href="https://www.dnielectronico.es/portaldnie/PRF1_Cons02.action?pag=REF_320" target="_blank" rel="noopener noreferrer">página de prueba de la DGP</a> y con los comandos <code>opensc-tool</code>.</p>
+<p>En resumen, se ha hecho un estupendo trabajo y en la dirección adecuada, pero la solución no va a ser definitiva hasta que Ceres recorra el mismo camino que se ha realizado con DNIe.</p>
+]]></content>
+    <author>
+      <name>@jact_abcweb</name>
+    </author>
+    <category term="Seguridad"/>
+    <contributor>
+      <name>@jact_abcweb</name>
+    </contributor>
+    <published>2011-02-16T11:59:00.000Z</published>
+    <rights>Copyright by @jact_abcweb</rights>
+  </entry>
+  <entry>
+    <title type="text">Un premio Príncipe de Asturias para el Software Libre</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-02-18-premio-principe-asturias.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-02-18-premio-principe-asturias.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<h2> Fuente: CENATIC</h2>
+<p>La Fundación Príncipe de Asturias ha invitado a CENATIC a presentar una propuesta de candidatura a los Premios Príncipes de Asturias 2011. Tras analizar las alternativas que, con las máximas posibilidades de acceder al galardón pudieran al mismo tiempo aunar los intereses de todos los agentes del sector del software libre en España, a propuesta de su Consejo Asesor y con el refrendo de sus órganos de gobierno, CENATIC ha decidido promover y presentar como candidato a <strong>La Comunidad Internacional del Software Libre</strong> a los Premios Príncipe de Asturias 2011, en su modalidad de Cooperación Internacional.</p>
+]]></summary>
+    <content type="html"><![CDATA[<h2> Fuente: CENATIC</h2>
+<p>La Fundación Príncipe de Asturias ha invitado a CENATIC a presentar una propuesta de candidatura a los Premios Príncipes de Asturias 2011. Tras analizar las alternativas que, con las máximas posibilidades de acceder al galardón pudieran al mismo tiempo aunar los intereses de todos los agentes del sector del software libre en España, a propuesta de su Consejo Asesor y con el refrendo de sus órganos de gobierno, CENATIC ha decidido promover y presentar como candidato a <strong>La Comunidad Internacional del Software Libre</strong> a los Premios Príncipe de Asturias 2011, en su modalidad de Cooperación Internacional.</p>
+<!-- more -->
+<blockquote>
+<p>La Comunidad Internacional del Software Libre es el conjunto de personas e instituciones de todo el mundo que contribuyen al software libre mediante un modelo colaborativo y abierto basado en la libertad, la compartición del conocimiento, la colaboración, la meritocracia y el respeto a los derechos de autor, con acciones como el desarrollo, divulgación, promoción, documentación, testing, organización, soporte y comercialización del software libre. El software libre ha permitido la generalización del conocimiento y el acceso a la tecnología a nivel mundial, eliminando barreras económicas, sociales, culturales, idiomáticas y geográficas.</p>
+</blockquote>
+<p>Convencidos de que esta candidatura es merecedora de tal reconocimiento, en CENATIC asumimos la tarea de convocar al sector del software libre y liderar la campaña de adhesiones, invitando a todos a afrontar de manera conjunta este enorme reto. Antes del 18 de marzo entregaremos a la Fundación Príncipe de Asturias un dossier que incluirá la descripción de la candidatura, méritos acreditados, adhesiones electrónicas y rubricadas, así como el informe final de méritos.</p>
+<p>Por esta razón, solicitamos de ti o de tu institución, la adhesión a esta campaña, para conseguir otorgar a la comunidad internacional del software libre este reconocimiento de gran prestigio y tan merecido. Para ello, te invitamos a:</p>
+<ul>
+<li>Cumplimentar una Adhesión Electrónica aportando tus comentarios sobre la razón por la que esta candidatura debería recibir el Premio.</li>
+<li>Cumplimentar una Adhesión Rubricada, puedes modificarlo en lo que estimes oportuno y enviarlo por correo postal a la dirección indicada en el propio documento.</li>
+</ul>
+<p>Esta es una excelente oportunidad para mostrar a la sociedad española e internacional la existencia de un sector asociado al software libre compuesto por desarrolladores, empresas, investigadores, universidades, divulgadores, gestores de comunidad, traductores... y todo un conjunto de personas e instituciones asociadas al software libre capaces de colaborar y trabajar de forma unida por una forma diferente de construir software, por un futuro tecnológico mejor para todos.</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Otros"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2011-02-18T07:54:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Liberamos &amp;quot;Migración Escritorio Software Libre&amp;quot;</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-02-21-liberamos-migracion-escritorio.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-02-21-liberamos-migracion-escritorio.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Desde el <strong>equipo AZLinux</strong> del <a href="http://www.zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a>, hemos elaborado y hacemos público el documento <a href="/files/migracionescritoriosl.pdf" target="_blank" rel="noopener noreferrer">Migración Escritorio Software Libre</a> (113 páginas).</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Desde el <strong>equipo AZLinux</strong> del <a href="http://www.zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a>, hemos elaborado y hacemos público el documento <a href="/files/migracionescritoriosl.pdf" target="_blank" rel="noopener noreferrer">Migración Escritorio Software Libre</a> (113 páginas).</p>
+<!-- more -->
+<div style="text-align:center">
+</div>
+<p>El objetivo de este documento es ofrecer una visión global de la información y procesos que se necesitan conocer para poder planificar y realizar una <strong>migración</strong> con éxito de los <strong>entornos de Escritorio a herramientas de Software Libre</strong>.</p>
+<p>En este sentido este documento se debe considerar como una <strong>guía de buenas prácticas</strong> y no tratarse como un manual con pasos y procesos rígidos e inmutables.</p>
+<p>Se estructura en 5 apartados:</p>
+<ol>
+<li>
+<p><strong>Estado del Arte</strong>. Describe la actualidad del Escritorio Libre mediante datos estadísticos, proyectos y organismos implicados en los procesos de migración a SL.</p>
+</li>
+<li>
+<p><strong>Guía Metodológica</strong>. Ofrece una visión acerca de los procedimientos y procesos necesarios para migrar los escritorios de una organización a herramientas de software libre. Es una guía neutral sin referencias tecnológicas concretas.</p>
+</li>
+<li>
+<p><strong>Guía Técnica</strong>. Muestra puntos de vista sobre los caminos y rutas tecnológicos mas apropiados para realizar este proceso.</p>
+</li>
+<li>
+<p><strong>Análisis DAFO</strong> de debilidades, amenazas, fortalezas y oportunidades del Escritorio Libre.</p>
+</li>
+<li>
+<p><strong>Conclusiones</strong>. A partir de toda la información, tanto cualitativa como cuantitativa, se ofrecen una serie de conclusiones y recomendaciones para mejorar los planes y procesos de migración.</p>
+</li>
+</ol>
+<p>Esperamos que sea de vuestro agrado.</p>
+<p>¡Síguenos en <a href="http://twitter.com/azlinuxzgz" target="_blank" rel="noopener noreferrer">Twitter</a>!</p>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2011-02-21T09:46:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Macros OpenOffice IV: Jugando con mayúsculas y minúsculas</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-03-18-macros-openoffice-iv.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-03-18-macros-openoffice-iv.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>En <strong>Microsoft Word</strong> existe una función asignada a la combinación <code>Mayúscula+F3</code> que realiza la siguiente función. Si sobre un texto seleccionado se pulsa <code>Mayúscula+F3</code> secuencialmente:</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>En <strong>Microsoft Word</strong> existe una función asignada a la combinación <code>Mayúscula+F3</code> que realiza la siguiente función. Si sobre un texto seleccionado se pulsa <code>Mayúscula+F3</code> secuencialmente:</p>
+<!-- more -->
+<ul>
+<li>El texto pasa de minúsculas a mayúsculas.</li>
+<li>El texto pasa de mayúsculas a minúsculas con la primera letra en Mayúscula.</li>
+<li>El texto pasa a minúsculas.</li>
+</ul>
+<p>Esta función en OpenOffice no existe. Pero se implementa con una macro. El autor original es <strong>Andrew Brown</strong>.</p>
+<p>Para asignarlo a una combinación de teclas tendremos que ir a <code>HERRAMIENTAS &gt; PERSONALIZAR &gt; TECLADO</code>, buscar ahí la combinación de teclas y buscar la macro en la biblioteca de macros.</p>
+<h2> Programa principal</h2>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Procedimiento acbCaseChanger</h2>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Procedimiento con funciones</h2>
+<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <author>
+      <name>Raúl Huerta</name>
+    </author>
+    <category term="Ofimática"/>
+    <contributor>
+      <name>Raúl Huerta</name>
+    </contributor>
+    <published>2011-03-18T10:59:00.000Z</published>
+    <rights>Copyright by Raúl Huerta</rights>
+  </entry>
+  <entry>
+    <title type="text">II Jornadas de Tecnologías Libres Milla Digital</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-04-07-ii-jornadas-tecnologias-libres.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-04-07-ii-jornadas-tecnologias-libres.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>En marzo participamos en las II Jornadas de Tecnologías Libres Milla Digital organizadas por el Ayuntamiento de Zaragoza.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>En marzo participamos en las II Jornadas de Tecnologías Libres Milla Digital organizadas por el Ayuntamiento de Zaragoza.</p>
+<!-- more -->
+<p>Hablamos de nuestro proyecto AZLinux y en especial sobre las actividades que nos han ocupado en el último año.</p>
+<p>También aprovechamos el evento para renovar el acuerdo de colaboración con CENATIC y reforzar nuetra idea de que el Software Libre se construye colaborando entre todos.</p>
+<p><a href="/files/azlinux_slides_II.pdf" target="_blank" rel="noopener noreferrer">Os dejamos nuestra presentación</a>.</p>
+<div style="text-align:center">
+</div>
+]]></content>
+    <author>
+      <name>eromero</name>
+    </author>
+    <category term="Presentación"/>
+    <contributor>
+      <name>eromero</name>
+    </contributor>
+    <published>2011-04-07T08:57:00.000Z</published>
+    <rights>Copyright by eromero</rights>
+  </entry>
+  <entry>
+    <title type="text">Hackfest del OpenDNIe en Cádiz</title>
+    <id>https://azlinux.github.io/azlinux.github.io/posts/2011-05-16-hackfest-opendnie-cadiz.html</id>
+    <link href="https://azlinux.github.io/azlinux.github.io/posts/2011-05-16-hackfest-opendnie-cadiz.html"/>
+    <updated>2023-07-18T12:46:27.000Z</updated>
+    <summary type="html"><![CDATA[<p>Los próximos días <strong>26 y 27 de mayo</strong>, se celebrará el primer <a href="https://web.archive.org/web/20110523093337/http://hackfest-opendnie.cenatic.es/" target="_blank" rel="noopener noreferrer">hackfest sobre el OpenDNIe</a>, en la Universidad de Cádiz.</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Los próximos días <strong>26 y 27 de mayo</strong>, se celebrará el primer <a href="https://web.archive.org/web/20110523093337/http://hackfest-opendnie.cenatic.es/" target="_blank" rel="noopener noreferrer">hackfest sobre el OpenDNIe</a>, en la Universidad de Cádiz.</p>
+<!-- more -->
+<p>Este evento, como dice <a href="https://twitter.com/lolox" target="_blank" rel="noopener noreferrer">Manuel Velardo</a>, tiene un doble objetivo:</p>
+<blockquote>
+<p>Celebrar este HackFest potenciará la incorporación de nuevos desarrolladores a la Comunidad OpenDNIe, pero al tiempo, hemos invitado a expertos de primer nivel para que nos ayuden a anticipar el futuro de las identidades digitales en Europa.</p>
+</blockquote>
+<p>Desde el equipo de AZLinux, les deseamos un gran éxito en la convocatoria y que este modelo de desarrollo colaborativo entre comunidad e instituciones públicas se pueda extender a otros proyectos.</p>
+<h2> Actualización: 2011-05-20</h2>
+<p>Finalmente, <a href="http://twitter.com/#!/azlinuxzgz/status/71465889920327680" target="_blank" rel="noopener noreferrer">estaremos presentes en el hackfest</a> dando una <a href="https://web.archive.org/web/20110623233022/http://hackfest-opendnie.cenatic.es/sessions/jorge-mart%C3%ADn-cenatic-y-jos%C3%A9-antonio-chavarr%C3%AD-ayto-zaragoza-opendnie-y-ceres-en-azlinux" target="_blank" rel="noopener noreferrer">charla sobre las peripecias que hemos tenido que hacer en AZLinux para hacer funcionar el DNIe y las tarjetas Ceres</a>.</p>
+]]></content>
+    <author>
+      <name>@jact_abcweb</name>
+    </author>
+    <category term="Evento"/>
+    <contributor>
+      <name>@jact_abcweb</name>
+    </contributor>
+    <published>2011-05-16T14:27:00.000Z</published>
+    <rights>Copyright by @jact_abcweb</rights>
+  </entry>
   <entry>
     <title type="text">Cómo hemos segurizado GRUB</title>
     <id>https://azlinux.github.io/azlinux.github.io/posts/2009-08-19-como-hemos-segurizado-grub.html</id>
