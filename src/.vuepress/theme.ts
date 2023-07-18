@@ -28,8 +28,7 @@ export default hopeTheme({
 
   blog: {
     medias: {
-      //GitHub: 'https://github.com/migasfree',
-      Twitter: 'https://twitter.com/azlinux',
+      Twitter: 'https://twitter.com/azlinuxzgz',
     },
     sidebarDisplay: 'always',
   },
@@ -37,7 +36,7 @@ export default hopeTheme({
   plugins: {
     blog: {
       excerptLength: 0,
-      article: '/blog/',
+      article: '/posts/',
       filter: ({ filePathRelative }) =>
         filePathRelative ? filePathRelative.startsWith('posts/') : false,
       type: [
