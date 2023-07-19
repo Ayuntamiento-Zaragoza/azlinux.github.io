@@ -3,7 +3,10 @@ title: Pese a todo, seguimos ahí
 date: 2015-03-30 10:50:00
 author: '@jact_abcweb'
 comment: false
+star: 5
 category:
+  - Otros
+tag:
   - Evolución
   - Dificultades
 ---
