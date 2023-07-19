@@ -3,6 +3,7 @@ title: Sensaciones TECNIMAP 2010
 date: 2010-04-12 00:09:00
 author: eromero
 comment: false
+star: 4
 category:
   - Opinión
 ---
