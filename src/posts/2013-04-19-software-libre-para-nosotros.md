@@ -3,6 +3,7 @@ title: Software libre, ¿qué es para nosotros?
 date: 2013-04-19 08:11:00
 author: eromero
 comment: false
+star: 4
 category:
   - Presentación
 ---
