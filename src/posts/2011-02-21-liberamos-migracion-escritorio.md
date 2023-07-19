@@ -3,6 +3,7 @@ title: 'Liberamos "Migración Escritorio Software Libre"'
 date: 2011-02-21 09:46:00
 author: eromero
 comment: false
+star: 5
 category:
   - Presentación
 ---
