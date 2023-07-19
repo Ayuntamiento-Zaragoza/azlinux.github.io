@@ -1,0 +1,51 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{r as o,o as t,c as p,e as l,a as s,b as n,d as c,f as i}from"./app-d77bd025.js";const r={},u=s("p",null,[n("Módulo de macros de "),s("strong",null,"Writer"),n(" (OpenOficce) que soluciona un error de interpretación en la opción "),s("strong",null,"Tabla -> Autoajustar -> Distribuir Filas Equitativamente"),n(".")],-1),k=s("p",null,[n("En "),s("strong",null,"Word"),n(" funcionaba de la siguiete manera: si seleccionas varias filas de diferente altura y eliges esta opción, no modifica la altura de la tabla y redistribuye el espacio equitativamente entre las filas seleccionadas. Sin embargo, con OpenOffice coge la altura de la fila más alta y lo aplica al resto.")],-1),d={href:"http://qa.openoffice.org/issues/show_bug.cgi?id=58326",target:"_blank",rel:"noopener noreferrer"},v=s("strong",null,"Distribuir Filas Equitativamente",-1),m=i(`<div class="language-vbnet line-numbers-mode" data-ext="vbnet"><pre class="language-vbnet"><code><span class="token keyword">Sub</span> Distribute_Rows_Evenly
+    <span class="token keyword">dim</span> document   <span class="token keyword">as</span> <span class="token keyword">object</span>
+
+    <span class="token comment"><span class="token keyword">rem</span> get access to the document</span>
+    document   <span class="token operator">=</span> ThisComponent
+    controller <span class="token operator">=</span> document.getCurrentController
+
+    ’<span class="token keyword">Get</span> the current selection <span class="token keyword">and</span> check that part <span class="token keyword">of</span> a table has been selected
+    sel <span class="token operator">=</span> controller.getSelection<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> sel.ImplementationName <span class="token operator">&lt;&gt;</span> <span class="token string">&quot;SwXTextTableCursor&quot;</span> <span class="token keyword">then</span> <span class="token keyword">exit</span> <span class="token keyword">sub</span>
+    selRng <span class="token operator">=</span> sel.RangeName
+
+    ’Extract the rows from the selection <span class="token keyword">name</span> <span class="token punctuation">(</span><span class="token keyword">in</span> the form ’C24<span class="token punctuation">:</span>G15’<span class="token punctuation">)</span>
+    <span class="token function">pos</span> <span class="token operator">=</span> <span class="token number">0</span>
+    ascZero <span class="token operator">=</span> Asc<span class="token punctuation">(</span><span class="token string">&quot;0&quot;</span><span class="token punctuation">)</span>
+    ascNine <span class="token operator">=</span> Asc<span class="token punctuation">(</span><span class="token string">&quot;9&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">do</span>  ’Look <span class="token keyword">for</span> the first number
+        <span class="token function">pos</span> <span class="token operator">=</span> <span class="token function">pos</span> <span class="token operator">+</span> <span class="token number">1</span>
+        ascVal <span class="token operator">=</span> Asc<span class="token punctuation">(</span><span class="token function">Mid</span><span class="token punctuation">(</span>selRng<span class="token punctuation">,</span> <span class="token function">pos</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">loop</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>ascVal <span class="token operator">&lt;</span> ascZero <span class="token keyword">or</span> ascVal <span class="token operator">&gt;</span> ascNine<span class="token punctuation">)</span>
+    startRowNum <span class="token operator">=</span> <span class="token keyword">CLng</span><span class="token punctuation">(</span><span class="token function">Mid</span><span class="token punctuation">(</span>selRng<span class="token punctuation">,</span> <span class="token function">pos</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">do</span>  ’Look <span class="token keyword">for</span> the second number
+        <span class="token function">pos</span> <span class="token operator">=</span> <span class="token function">pos</span> <span class="token operator">+</span> <span class="token number">1</span>
+        ascVal <span class="token operator">=</span> Asc<span class="token punctuation">(</span><span class="token function">Mid</span><span class="token punctuation">(</span>selRng<span class="token punctuation">,</span> <span class="token function">pos</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">loop</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>ascVal <span class="token operator">&lt;</span> ascZero <span class="token keyword">or</span> ascVal <span class="token operator">&gt;</span> ascNine<span class="token punctuation">)</span>
+    endRowNum <span class="token operator">=</span> <span class="token keyword">CLng</span><span class="token punctuation">(</span><span class="token function">Mid</span><span class="token punctuation">(</span>selRng<span class="token punctuation">,</span> <span class="token function">pos</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
+
+    ’Early<span class="token operator">-</span><span class="token keyword">out</span> <span class="token keyword">if</span> only one row selected
+    <span class="token keyword">if</span> startRowNum <span class="token operator">=</span> endRowNum <span class="token keyword">then</span> <span class="token keyword">exit</span> <span class="token keyword">sub</span>
+
+    ’<span class="token keyword">Get</span> the table
+    vcurs <span class="token operator">=</span> controller.getViewCursor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    table <span class="token operator">=</span> vcurs.TextTable
+    rows <span class="token operator">=</span> table.getRows<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    ’Add up all the row heights
+    totalHeight <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> <span class="token function">pos</span> <span class="token operator">=</span> startRowNum <span class="token keyword">to</span> endRowNum
+        totalHeight <span class="token operator">=</span> totalHeight <span class="token operator">+</span> rows<span class="token punctuation">(</span><span class="token function">pos</span><span class="token punctuation">)</span>.Height
+    <span class="token keyword">next</span>
+
+    ’Calculate the average row height
+    aveHeight <span class="token operator">=</span> totalHeight <span class="token operator">/</span> <span class="token punctuation">(</span>endRowNum <span class="token operator">-</span> startRowNum <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+    ’<span class="token keyword">Set</span> all the row heights <span class="token keyword">to</span> the average
+    <span class="token keyword">for</span> <span class="token function">pos</span> <span class="token operator">=</span> startRowNum <span class="token keyword">to</span> endRowNum
+        rows<span class="token punctuation">(</span><span class="token function">pos</span><span class="token punctuation">)</span>.IsAutoHeight <span class="token operator">=</span> <span class="token keyword">False</span>
+        rows<span class="token punctuation">(</span><span class="token function">pos</span><span class="token punctuation">)</span>.Height <span class="token operator">=</span> aveHeight
+    <span class="token keyword">next</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,1);function b(w,f){const a=o("ExternalLinkIcon");return t(),p("div",null,[u,l(" more "),k,s("p",null,[n("Hay abierta una "),s("a",d,[n("issue en OpenOffice"),c(a)]),n(" de la cual extraemos una macro alternativa que sustituye a la opción "),v,n(" en OO.")]),m])}const h=e(r,[["render",b],["__file","2011-02-16-macros-openoffice-iii.html.vue"]]);export{h as default};
