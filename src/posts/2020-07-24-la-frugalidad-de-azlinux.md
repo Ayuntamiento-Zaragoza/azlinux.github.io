@@ -3,7 +3,10 @@ title: La frugalidad de AZLinux
 date: 2020-07-24 09:27:00
 author: '@jact_abcweb'
 comment: false
+star: 5
 category:
+  - Desktop
+tag:
   - Evolución
 ---
 
