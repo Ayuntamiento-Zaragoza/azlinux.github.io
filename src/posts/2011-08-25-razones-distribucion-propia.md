@@ -3,6 +3,7 @@ title: Razones para hacer una distribución propia
 date: 2011-08-25 12:14:00
 author: '@jact_abcweb'
 comment: false
+star: 5
 category:
   - Software
 tag:
