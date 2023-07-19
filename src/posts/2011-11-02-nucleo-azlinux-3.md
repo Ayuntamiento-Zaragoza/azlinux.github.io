@@ -3,6 +3,7 @@ title: El núcleo de AZLinux 3
 date: 2011-11-02 08:49:00
 author: '@jact_abcweb'
 comment: false
+star: 3
 category:
   - Desktop
 tag:
