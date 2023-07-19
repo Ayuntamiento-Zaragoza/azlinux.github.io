@@ -3,6 +3,7 @@ title: Automatización de migraciones AZLinux
 date: 2011-09-05 23:31:00
 author: 'Alberto Gacías'
 comment: false
+star: 4
 category:
   - Software
 tag:
