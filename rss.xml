@@ -6,11 +6,12 @@
     <link>https://azlinux.github.io/azlinux.github.io/</link>
     <description>Distribución Linux del Ayuntamiento de Zaragoza para los empleados municipales</description>
     <language>es-ES</language>
-    <pubDate>Wed, 19 Jul 2023 12:57:07 GMT</pubDate>
-    <lastBuildDate>Wed, 19 Jul 2023 12:57:07 GMT</lastBuildDate>
+    <pubDate>Wed, 19 Jul 2023 18:34:55 GMT</pubDate>
+    <lastBuildDate>Wed, 19 Jul 2023 18:34:55 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Presentación</category>
+    <category>Seguridad</category>
     <category>Software</category>
     <category>Desktop</category>
     <category>Opinión</category>
@@ -19,11 +20,95 @@
     <category>Hardware</category>
     <category>Live CD</category>
     <category>Evento</category>
-    <category>Seguridad</category>
     <category>Impresión</category>
     <category>Documentación</category>
-    <category>Evolución</category>
-    <category>Dificultades</category>
+    <item>
+      <title>¡Hasta luego, Miguel Jaque!</title>
+      <link>https://azlinux.github.io/azlinux.github.io/posts/2012-06-22-hasta-luego-miguel-jaque.html</link>
+      <guid>https://azlinux.github.io/azlinux.github.io/posts/2012-06-22-hasta-luego-miguel-jaque.html</guid>
+      <source url="https://azlinux.github.io/azlinux.github.io/rss.xml">¡Hasta luego, Miguel Jaque!</source>
+      <description>Miguel Jaque finaliza su etapa en CENATIC.</description>
+      <category>Presentación</category>
+      <pubDate>Fri, 22 Jun 2012 18:43:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Miguel Jaque finaliza su etapa en CENATIC.</p>
+<!-- more -->
+<p>Durante la andadura de AZLinux tanto <strong>Miguel Jaque</strong> como otros compañeros de CENATIC, nos han acompañado en nuestras alegrías y penas. Recuerdo especialmente tu charla sobre <a href="http://www.youtube.com/watch?v=9jOoQR3IaXk&amp;feature=plcp" target="_blank" rel="noopener noreferrer">Presente y Futuro del Software Libre en Zaragoza Milla Digital</a> en la que tuve el honor de compartir mesa contigo.</p>
+<div style="text-align:center">
+</div>
+<p>Reconocemos y agradecemos tu labor en CENATIC como defensor del Software Libre con argumentos éticos y técnicos, y especialmente tu apoyo para que la AAPP avance hacia modelos mas abiertos y sostenibles.</p>
+<p>El Software Libre es abierto y sostenible, y estoy convencido que esto, a no tardar mucho, va a ser una exigencia de nuestro clientes, los ciudadanos y ciudadanas a los que debemos máxima eficacia y eficiencia.</p>
+<p>Miguel, esperamos contar contigo en tu nueva andadura para la que te deseamos toda la suerte del mundo.</p>
+<blockquote>
+<p>Eduardo Romero. Equipo AZLinux.</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Certificados digitales en Ubuntu 12.04</title>
+      <link>https://azlinux.github.io/azlinux.github.io/posts/2012-07-11-certificados-digitales-ubuntu.html</link>
+      <guid>https://azlinux.github.io/azlinux.github.io/posts/2012-07-11-certificados-digitales-ubuntu.html</guid>
+      <source url="https://azlinux.github.io/azlinux.github.io/rss.xml">Certificados digitales en Ubuntu 12.04</source>
+      <description>Con el cambio de distribución base (de openSUSE a Ubuntu), tocaba, de nuevo, salvar el importante escollo de hacer funcionar los certificados digitales en la nueva plataforma. El reto consistía (otra vez) en tener disponibles simultáneamente ambos tipos de certificados: Ceres y DNIe. Todo volvía a depender de encontrar una versión de OpenSC que hiciera esto posible.</description>
+      <category>Seguridad</category>
+      <pubDate>Wed, 11 Jul 2012 11:59:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Con el cambio de distribución base (<a href="2012-05-28-azlinux-3-ha-muerto">de openSUSE a Ubuntu</a>), tocaba, de nuevo, salvar el importante escollo de hacer funcionar los certificados digitales en la nueva plataforma. El reto consistía (otra vez) en tener disponibles simultáneamente ambos tipos de certificados: Ceres y DNIe. Todo volvía a depender de encontrar una versión de OpenSC que hiciera esto posible.</p>
+<!-- more -->
+<p><a href="https://web.archive.org/web/20120731091948/http://www.opensc-project.org/opensc/roadmap" target="_blank" rel="noopener noreferrer">OpenDNIe está a punto de integrarse dentro de OpenSC</a>, y en la <a href="https://web.archive.org/web/20120611170240/https://forja.cenatic.es/frs/?group_id=160" target="_blank" rel="noopener noreferrer">forja de Cenatic</a> hay versiones previas a esta inminente integración, que permiten instalarlo sin problemas en varias distribuciones Linux actuales.</p>
+<p>Sin embargo, Ceres se ha quedado en el limbo. La comunidad dispone de una versión liberada del proyecto de la FNMT, pero nadie da el paso para integrarla dentro de OpenSC. El resultado es que cada vez es más complicado hacer convivir ambos módulos en las distribuciones modernas de Linux.</p>
+<h2> ¿Cómo lo hemos conseguido esta vez?</h2>
+<p>El escollo más claro lo constituye el hecho de que a partir de <code>OpenSC-0.12</code>, ya no es posible cargar módulos de certificados digitales. Había que encontrar una versión que funcionara en <em>Ubuntu Precise</em> y que permitiera la carga de módulos.</p>
+<p>De nuevo, hemos recurrido a la forja de Cenatic para partir de una versión de <code>OpenSC-0.11.13</code> que integra, además, el DNIe.</p>
+<p>La mala noticia es que ha costado compilar dicha versión en <em>Ubuntu 12.04</em>. <a href="http://wiki.debian.org/ToolChain/DSOLinking" target="_blank" rel="noopener noreferrer">Cambios en la forma de enlazar librerías en el sistema</a>, nos han mantenido entretenidos durante algunas semanas. Aún así, no hemos sido capaces de compilarla con todos los módulos activos, y hemos tenido que prescindir de la librería <code>opensc-signer.so</code>.</p>
+<p>El siguiente reto ha consistido en paquetizar el resultado de la compilación. Para ello, hemos partido del <a href="http://packages.ubuntu.com/natty/opensc" target="_blank" rel="noopener noreferrer">paquete para Ubuntu Natty (el último de la versión 0.11)</a>.</p>
+<p>Se han tenido que quitar algunos <a href="http://es.wikipedia.org/wiki/Parche_%28inform%C3%A1tica%29" target="_blank" rel="noopener noreferrer"><em>patches</em></a>, modificar algún otro y adecuar la compilación para que no se genere el paquete <code>mozilla-opensc</code> (la librería <code>opensc-signer.so</code>). Aparte de eso, el paquete es funcional en <em>Ubuntu 12.04</em>.</p>
+<p>Después, se ha compilado el módulo de Ceres, modificando, naturalmente, la versión referida a OpenSC.</p>
+<h2> Conclusiones</h2>
+<p>El sistema funciona, pero si cada vez que cambiemos de versión de Ubuntu hay que hacer todo esto (mientras se pueda hacer...), vamos a tener un problema importante en la migración a Linux de nuestra administración.</p>
+<p>Tras varios años de trabajar con entornos Linux y los certificados digitales españoles, me vuelven a surgir algunos interrogantes a los que todavía no hemos encontrado respuesta: <strong>¿Cuándo tendremos disponible Ceres dentro de OpenSC?</strong> Si se ha conseguido con el DNIe, ¿qué inconvenientes hay para que no se pueda integrar el código de Ceres?</p>
+<p>El DNIe es <strong>potencialmente usable</strong> por gran parte de la población española.</p>
+<p>Ceres es <strong>usado a diario</strong> por la administración pública española para sus gestiones con certificados digitales.</p>
+<h2> Artículos relacionados</h2>
+<ul>
+<li><a href="2011-10-31-certificados-digitales-azlinux-3">Certificados digitales en AZLinux 3</a>.</li>
+<li><a href="2011-06-02-conclusiones-opendnie-hackfest">Conclusiones del OpenDNIe hackfest</a>.</li>
+<li><a href="2011-02-16-opendnie-en-azlinux">OpenDNIe en AZLinux</a>.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>AZLinux 12 en el Zentyal Summit</title>
+      <link>https://azlinux.github.io/azlinux.github.io/posts/2012-10-05-azlinux-12-zentyal-summit.html</link>
+      <guid>https://azlinux.github.io/azlinux.github.io/posts/2012-10-05-azlinux-12-zentyal-summit.html</guid>
+      <source url="https://azlinux.github.io/azlinux.github.io/rss.xml">AZLinux 12 en el Zentyal Summit</source>
+      <description>Con motivo del Zentyal Summit de este año, Ricardo Cavero (@caveroarceiz), ha dado una charla sobre la evolución del proyecto de migración a software libre que estamos llevando a cabo desde hace unos años en nuestro Ayuntamiento. Desde hace unos meses estamos trabajando en una versión de AZLinux basada en Ubuntu y esta no podía ser mejor ocasión para presentarla en sociedad.</description>
+      <category>Presentación</category>
+      <pubDate>Fri, 05 Oct 2012 08:57:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Con motivo del <a href="https://web.archive.org/web/20121011230620/http://events.zentyal.com/zentyal-summit-2012/" target="_blank" rel="noopener noreferrer">Zentyal Summit de este año</a>, Ricardo Cavero (<a href="https://twitter.com/caveroarceiz" target="_blank" rel="noopener noreferrer">@caveroarceiz</a>), ha dado una charla sobre la evolución del <a href="2011-02-21-liberamos-migracion-escritorio">proyecto de migración a software libre que estamos llevando a cabo desde hace unos años en nuestro Ayuntamiento</a>. Desde hace unos meses estamos trabajando en una <a href="2012-05-28-azlinux-3-ha-muerto">versión de AZLinux basada en Ubuntu</a> y esta no podía ser mejor ocasión para presentarla en sociedad.</p>
+<!-- more -->
+<div style="text-align:center">
+<p><img src="/img/azlinux-12-beta.png" alt="Nuevo escritorio en AZLinux 12" title="Nuevo escritorio en AZLinux 12"></p>
+</div>
+<p>Aún no es una versión en producción aunque ya está en fase <em>beta</em>. Nos faltan algunos ajustes finales y, para resolver varios de ellos, vamos a contar con la ayuda de <a href="http://www.zentyal.com/" target="_blank" rel="noopener noreferrer">Zentyal</a>. Ante todo, debemos centrarnos en conseguir la mejor experiencia de usuario posible para que nos ayude en nuestra gestión del cambio diaria. Y tener tan cerca de nosotros a una empresa como Zentyal, nos da las garantías necesarias para emprender este nuevo reto.</p>
+<p>El cambio a <a href="http://www.ubuntu.com/" target="_blank" rel="noopener noreferrer">Ubuntu</a> nos da más independencia tecnológica de la que teníamos pero, sin embargo, nos ha cambiado el paradigma de escritorio que hasta entonces conocíamos con <em>Gnome 2</em>. La elección del nuevo entorno de escritorio no ha estado exenta de dudas e incertidumbres y esperamos no habernos equivocado demasiado en nuestra opción final: <a href="https://www.psychocats.net/ubuntu/classicgnome" target="_blank" rel="noopener noreferrer">Gnome Classic</a>.</p>
+<p>Otro aspecto importante que debíamos tener en cuenta antes de sacar a producción la nueva versión de AZLinux era preparar las herramientas necesarias para la actualización de los equipos existentes (tanto de Windows a AZLinux 12, como de AZLinux 2 a la versión 12). Este es el motivo que ha hecho ralentizar el proceso de culminación de esta versión. Pero ahora que este trabajo está terminado, estamos en condiciones de seguir con las pruebas en algunos usuarios <em>reales</em> (especialmente seleccionados para la ocasión).</p>
+<p>Durante la charla en el <em>Zentyal Summit</em>, ha habido una pregunta que me ha llamado especialmente la atención. Alguien ha preguntado sobre si teníamos alguna medida sobre el estado de satisfacción de nuestros usuarios con el cambio de sistema operativo. La realidad es que no la tenemos como tal, aunque la comunicación y el <em>feedback</em> es constante con ellos. De hecho, la experiencia de estos años, nos hace sacar estas conclusiones al respecto:</p>
+<ul>
+<li>
+<p>En nuestra organización, ha sido más problemático el cambio de la herramienta ofimática que el del sistema operativo. Mientras que tenemos a dos personas en exclusiva para resolver dudas sobre OpenOffice/LibreOffice, tan apenas hay incidencias sobre el uso del sistema operativo (una vez que los usuarios han pasado por un curso de formación que nosotros mismos hemos diseñado).</p>
+</li>
+<li>
+<p>Las soluciones de las incidencias de los equipos con Linux son más fáciles de desplegar que en los equipos con Windows que poseemos. Además, un determinado problema suele propagarse menos porque, una vez detectado en un equipo, la solución se aplica a todos los demás en un período de tiempo razonablemente corto (gracias al hecho de que paquetizamos los cambios en la configuración software, a nuestra herramienta de distribución <a href="http://migasfree.org/" target="_blank" rel="noopener noreferrer">migasfree</a> y a que los equipos con Linux son mucho más homogéneos y menos degradables).</p>
+</li>
+<li>
+<p>Aunque la gestión del cambio ha sido constante durante todo este tiempo, últimamente hemos observado una variación en la tendencia. Si antes los usuarios eran reticentes a los cambios, ahora los hay que nos piden directamente que les actualicemos a Linux porque han observado que va más rápido (la edad media de nuestros equipos es de 5/6 años) y da menos problemas.</p>
+</li>
+</ul>
+<p><a href="/files/windows2linuxv2.pdf" target="_blank" rel="noopener noreferrer">Presentación del Proyecto AZLinux en Zentyal Summit 2012</a>:</p>
+<div style="text-align:center">
+</div>
+]]></content:encoded>
+      <enclosure url="https://azlinux.github.io/azlinux.github.io/img/azlinux-12-beta.png &apos;Nuevo escritorio en AZLinux 12&apos;" type="image/"/>
+    </item>
     <item>
       <title>Conclusiones del OpenDNIe hackfest</title>
       <link>https://azlinux.github.io/azlinux.github.io/posts/2011-06-02-conclusiones-opendnie-hackfest.html</link>
@@ -334,6 +419,25 @@
 <div style="text-align:center">
 <p><img src="/img/azlinux-1.png" alt="Aspecto del escritorio en AZLinux 1" title="Aspecto del escritorio en AZLinux 1"></p>
 </div>
+<h2> AZLinux 2</h2>
+<p>En febrero de 2010, <strong>AZLinux 2</strong> sale de la fábrica para empezar su vida productiva. Basada en <strong>openSUSE 11.2</strong>, ha ido evolucionando notablemente en todo este tiempo, añadiendo <em>parches</em> (muchas veces externos a openSUSE) aquí y allá. Aunque sus comienzos fueron titubeantes, ahora mismo es nuestro buque insignia, ya que se encuentra en más del 80% de los equipos con Linux del Ayuntamiento.</p>
+<div style="text-align:center">
+<p><img src="/img/azlinux-2.png" alt="Aspecto del escritorio en AZLinux 2" title="Aspecto del escritorio en AZLinux 2"></p>
+</div>
+<h2> AZLinux 3</h2>
+<p>En verano de 2011, empezamos a trabajar sobre lo que iba a ser <strong>AZLinux 3</strong>. Ya no teníamos tanta urgencia como con la anterior versión, pero sabíamos que era imprescindible estar lo más al día posible para dar el mejor servicio posible a nuestros usuarios. A nivel de distribución base era bastante continuista en relación a openSUSE 11.2, ya que no había cambios muy drásticos. Sin embargo, en cuanto al código desarrollado por nosotros, sí que hubo cambios significativos. Lástima que se quedara sólo en un prototipo, pero es que se nos quedó pequeño antes de hora.</p>
+<div style="text-align:center">
+<p><img src="/img/azlinux-3.png" alt="Aspecto del escritorio en AZLinux 3" title="Aspecto del escritorio en AZLinux 3"></p>
+</div>
+<h2> AZLinux 12</h2>
+<p>Un mes antes de que saliera la versión oficial, en marzo de este año, ya estábamos estudiando y haciendo pruebas con la nueva versión de Ubuntu. Es la siguiente <a href="https://wiki.ubuntu.com/LTS" target="_blank" rel="noopener noreferrer">versión LTS</a> y hay una gran comunidad detrás (tal vez la mayor en estos momentos). Todavía tiene <em>bugs</em> importantes que resolver (es normal llevando tan poco tiempo de vida), pero estamos seguros e ilusionados en que <strong>AZLinux 12</strong> es un gran salto, por muchos motivos, en <a href="2011-02-21-liberamos-migracion-escritorio">nuestro proyecto de migración a software libre</a>.</p>
+<div style="text-align:center">
+<p><img src="/img/azlinux-12.png" alt="Aspecto del escritorio en AZLinux 12" title="Aspecto del escritorio en AZLinux 12"></p>
+</div>
+<blockquote>
+<p>Sin cambio, el progreso es imposible; y los que no son capaces de cambiar de mentalidad no son capaces de cambiar nada.</p>
+<p><a href="http://es.wikipedia.org/wiki/George_Bernard_Shaw" target="_blank" rel="noopener noreferrer">George Bernard Shaw</a></p>
+</blockquote>
 ]]></content:encoded>
       <enclosure url="https://azlinux.github.io/azlinux.github.io/img/azlinux-1.png &apos;Aspecto del escritorio en AZLinux 1&apos;" type="image/"/>
     </item>
@@ -1412,8 +1516,7 @@
       <guid>https://azlinux.github.io/azlinux.github.io/posts/2015-03-30-pese-a-todo-seguimos-ahi.html</guid>
       <source url="https://azlinux.github.io/azlinux.github.io/rss.xml">Pese a todo, seguimos ahí</source>
       <description>AZLinux y sus molinos Hacía ya un par de años en que no nos dejábamos caer por el blog. Las razones han sido diversas, pero ha habido una que se alza por encima de las demás: la...</description>
-      <category>Evolución</category>
-      <category>Dificultades</category>
+      <category>Otros</category>
       <pubDate>Mon, 30 Mar 2015 10:50:00 GMT</pubDate>
       <content:encoded><![CDATA[<div style="text-align:center">
 <p><img src="/img/beastie-tux-quijote.jpg" alt="AZLinux y sus molinos" title="AZLinux y sus molinos"></p>
@@ -1452,7 +1555,7 @@
       <guid>https://azlinux.github.io/azlinux.github.io/posts/2020-07-24-la-frugalidad-de-azlinux.html</guid>
       <source url="https://azlinux.github.io/azlinux.github.io/rss.xml">La frugalidad de AZLinux</source>
       <description>Han pasado más de 5 años desde la última entrada en esta bitácora (2015-03-30-pese-a-todo-seguimos-ahi). Cinco años que han dado para mucho. Cinco años en los que hemos dado la ...</description>
-      <category>Evolución</category>
+      <category>Desktop</category>
       <pubDate>Fri, 24 Jul 2020 09:27:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>Han pasado más de 5 años desde la <a href="2015-03-30-pese-a-todo-seguimos-ahi">última entrada en esta bitácora</a>. Cinco años que han dado para mucho. Cinco años en los que hemos dado la vuelta a la tortilla, ya que actualmente, el 70% de los ordenadores del Ayuntamiento de Zaragoza tienen un sistema operativo Linux. Cinco años en los que el <a href="https://wiki.vitalinux.educa.aragon.es/" target="_blank" rel="noopener noreferrer">proyecto Vitalinux Edu de la DGA</a>, heredero del germen que supuso <a href="https://es.wikipedia.org/wiki/Vitalinux" target="_blank" rel="noopener noreferrer">Vitalinux</a>, ha nacido y se ha expandido en casi 80 centros educativos de Aragón.</p>
 <p>La palabra <a href="https://es.wikipedia.org/wiki/Frugalidad" target="_blank" rel="noopener noreferrer">frugalidad</a> parece que está últimamente de moda. Puede tener connotaciones negativas como austeridad o pasividad, pero en nuestro contexto, tiene connotaciones muy positivas, ya que están relacionadas con la <strong>optimización</strong> y la <strong>eficiencia</strong>. A lo largo de este tiempo, se han visto mermados nuestros recursos humanos para afrontar la migración a software libre dentro del Ayuntamiento, pero cada día teníamos que dar soporte a más ordenadores y realizábamos más proyectos en paralelo. Nuestra receta ha sido sencilla: aplicar los procedimientos adecuados y llevar a cabo la <a href="https://es.wikipedia.org/wiki/Proceso_de_mejora_continua" target="_blank" rel="noopener noreferrer">mejora continua</a> siempre que nos ha sido posible.</p>
