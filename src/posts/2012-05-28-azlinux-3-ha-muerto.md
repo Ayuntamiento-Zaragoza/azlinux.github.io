@@ -3,6 +3,7 @@ title: AZLinux 3 ha muerto, ¡viva AZLinux 12!
 date: 2012-05-28 14:14:00
 author: '@jact_abcweb'
 comment: false
+star: 5
 category:
   - Desktop
 ---
@@ -28,3 +29,31 @@ Hacia finales de 2008, nace **AZLinux 1**. Hubo 14 prototipos previos a esta pri
 ::: center
 ![Aspecto del escritorio en AZLinux 1](/img/azlinux-1.png 'Aspecto del escritorio en AZLinux 1')
 :::
+
+## AZLinux 2
+
+En febrero de 2010, **AZLinux 2** sale de la fábrica para empezar su vida productiva. Basada en **openSUSE 11.2**, ha ido evolucionando notablemente en todo este tiempo, añadiendo _parches_ (muchas veces externos a openSUSE) aquí y allá. Aunque sus comienzos fueron titubeantes, ahora mismo es nuestro buque insignia, ya que se encuentra en más del 80% de los equipos con Linux del Ayuntamiento.
+
+::: center
+![Aspecto del escritorio en AZLinux 2](/img/azlinux-2.png 'Aspecto del escritorio en AZLinux 2')
+:::
+
+## AZLinux 3
+
+En verano de 2011, empezamos a trabajar sobre lo que iba a ser **AZLinux 3**. Ya no teníamos tanta urgencia como con la anterior versión, pero sabíamos que era imprescindible estar lo más al día posible para dar el mejor servicio posible a nuestros usuarios. A nivel de distribución base era bastante continuista en relación a openSUSE 11.2, ya que no había cambios muy drásticos. Sin embargo, en cuanto al código desarrollado por nosotros, sí que hubo cambios significativos. Lástima que se quedara sólo en un prototipo, pero es que se nos quedó pequeño antes de hora.
+
+::: center
+![Aspecto del escritorio en AZLinux 3](/img/azlinux-3.png 'Aspecto del escritorio en AZLinux 3')
+:::
+
+## AZLinux 12
+
+Un mes antes de que saliera la versión oficial, en marzo de este año, ya estábamos estudiando y haciendo pruebas con la nueva versión de Ubuntu. Es la siguiente [versión LTS](https://wiki.ubuntu.com/LTS) y hay una gran comunidad detrás (tal vez la mayor en estos momentos). Todavía tiene _bugs_ importantes que resolver (es normal llevando tan poco tiempo de vida), pero estamos seguros e ilusionados en que **AZLinux 12** es un gran salto, por muchos motivos, en [nuestro proyecto de migración a software libre](2011-02-21-liberamos-migracion-escritorio).
+
+::: center
+![Aspecto del escritorio en AZLinux 12](/img/azlinux-12.png 'Aspecto del escritorio en AZLinux 12')
+:::
+
+> Sin cambio, el progreso es imposible; y los que no son capaces de cambiar de mentalidad no son capaces de cambiar nada.
+>
+> [George Bernard Shaw](http://es.wikipedia.org/wiki/George_Bernard_Shaw)
