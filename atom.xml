@@ -3,7 +3,7 @@
   <id>https://azlinux.github.io/azlinux.github.io/</id>
   <title>AZLinux</title>
   <subtitle>Distribución Linux del Ayuntamiento de Zaragoza para los empleados municipales</subtitle>
-  <updated>2023-07-19T18:37:04.232Z</updated>
+  <updated>2023-07-20T09:44:53.010Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://azlinux.github.io/azlinux.github.io/atom.xml"/>
   <link rel="alternate" href="https://azlinux.github.io/azlinux.github.io/"/>
@@ -104,7 +104,7 @@
     <title type="text">AZLinux 12 en el Zentyal Summit</title>
     <id>https://azlinux.github.io/azlinux.github.io/posts/2012-10-05-azlinux-12-zentyal-summit.html</id>
     <link href="https://azlinux.github.io/azlinux.github.io/posts/2012-10-05-azlinux-12-zentyal-summit.html"/>
-    <updated>2023-07-19T18:33:48.000Z</updated>
+    <updated>2023-07-20T09:44:02.000Z</updated>
     <summary type="html"><![CDATA[<p>Con motivo del <a href="https://web.archive.org/web/20121011230620/http://events.zentyal.com/zentyal-summit-2012/" target="_blank" rel="noopener noreferrer">Zentyal Summit de este año</a>, Ricardo Cavero (<a href="https://twitter.com/caveroarceiz" target="_blank" rel="noopener noreferrer">@caveroarceiz</a>), ha dado una charla sobre la evolución del <a href="2011-02-21-liberamos-migracion-escritorio">proyecto de migración a software libre que estamos llevando a cabo desde hace unos años en nuestro Ayuntamiento</a>. Desde hace unos meses estamos trabajando en una <a href="2012-05-28-azlinux-3-ha-muerto">versión de AZLinux basada en Ubuntu</a> y esta no podía ser mejor ocasión para presentarla en sociedad.</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>Con motivo del <a href="https://web.archive.org/web/20121011230620/http://events.zentyal.com/zentyal-summit-2012/" target="_blank" rel="noopener noreferrer">Zentyal Summit de este año</a>, Ricardo Cavero (<a href="https://twitter.com/caveroarceiz" target="_blank" rel="noopener noreferrer">@caveroarceiz</a>), ha dado una charla sobre la evolución del <a href="2011-02-21-liberamos-migracion-escritorio">proyecto de migración a software libre que estamos llevando a cabo desde hace unos años en nuestro Ayuntamiento</a>. Desde hace unos meses estamos trabajando en una <a href="2012-05-28-azlinux-3-ha-muerto">versión de AZLinux basada en Ubuntu</a> y esta no podía ser mejor ocasión para presentarla en sociedad.</p>
@@ -121,7 +121,7 @@
 <p>En nuestra organización, ha sido más problemático el cambio de la herramienta ofimática que el del sistema operativo. Mientras que tenemos a dos personas en exclusiva para resolver dudas sobre OpenOffice/LibreOffice, tan apenas hay incidencias sobre el uso del sistema operativo (una vez que los usuarios han pasado por un curso de formación que nosotros mismos hemos diseñado).</p>
 </li>
 <li>
-<p>Las soluciones de las incidencias de los equipos con Linux son más fáciles de desplegar que en los equipos con Windows que poseemos. Además, un determinado problema suele propagarse menos porque, una vez detectado en un equipo, la solución se aplica a todos los demás en un período de tiempo razonablemente corto (gracias al hecho de que paquetizamos los cambios en la configuración software, a nuestra herramienta de distribución <a href="http://migasfree.org/" target="_blank" rel="noopener noreferrer">migasfree</a> y a que los equipos con Linux son mucho más homogéneos y menos degradables).</p>
+<p>Las soluciones de las incidencias de los equipos con Linux son más fáciles de desplegar que en los equipos con Windows que poseemos. Además, un determinado problema suele propagarse menos porque, una vez detectado en un equipo, la solución se aplica a todos los demás en un período de tiempo razonablemente corto (gracias al hecho de que empaquetamos los cambios en la configuración software, a nuestra herramienta de distribución <a href="http://migasfree.org/" target="_blank" rel="noopener noreferrer">migasfree</a> y a que los equipos con Linux son mucho más homogéneos y menos degradables).</p>
 </li>
 <li>
 <p>Aunque la gestión del cambio ha sido constante durante todo este tiempo, últimamente hemos observado una variación en la tendencia. Si antes los usuarios eran reticentes a los cambios, ahora los hay que nos piden directamente que les actualicemos a Linux porque han observado que va más rápido (la edad media de nuestros equipos es de 5/6 años) y da menos problemas.</p>

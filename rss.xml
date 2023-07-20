@@ -6,8 +6,8 @@
     <link>https://azlinux.github.io/azlinux.github.io/</link>
     <description>Distribución Linux del Ayuntamiento de Zaragoza para los empleados municipales</description>
     <language>es-ES</language>
-    <pubDate>Wed, 19 Jul 2023 18:37:04 GMT</pubDate>
-    <lastBuildDate>Wed, 19 Jul 2023 18:37:04 GMT</lastBuildDate>
+    <pubDate>Thu, 20 Jul 2023 09:44:53 GMT</pubDate>
+    <lastBuildDate>Thu, 20 Jul 2023 09:44:53 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Presentación</category>
@@ -97,7 +97,7 @@
 <p>En nuestra organización, ha sido más problemático el cambio de la herramienta ofimática que el del sistema operativo. Mientras que tenemos a dos personas en exclusiva para resolver dudas sobre OpenOffice/LibreOffice, tan apenas hay incidencias sobre el uso del sistema operativo (una vez que los usuarios han pasado por un curso de formación que nosotros mismos hemos diseñado).</p>
 </li>
 <li>
-<p>Las soluciones de las incidencias de los equipos con Linux son más fáciles de desplegar que en los equipos con Windows que poseemos. Además, un determinado problema suele propagarse menos porque, una vez detectado en un equipo, la solución se aplica a todos los demás en un período de tiempo razonablemente corto (gracias al hecho de que paquetizamos los cambios en la configuración software, a nuestra herramienta de distribución <a href="http://migasfree.org/" target="_blank" rel="noopener noreferrer">migasfree</a> y a que los equipos con Linux son mucho más homogéneos y menos degradables).</p>
+<p>Las soluciones de las incidencias de los equipos con Linux son más fáciles de desplegar que en los equipos con Windows que poseemos. Además, un determinado problema suele propagarse menos porque, una vez detectado en un equipo, la solución se aplica a todos los demás en un período de tiempo razonablemente corto (gracias al hecho de que empaquetamos los cambios en la configuración software, a nuestra herramienta de distribución <a href="http://migasfree.org/" target="_blank" rel="noopener noreferrer">migasfree</a> y a que los equipos con Linux son mucho más homogéneos y menos degradables).</p>
 </li>
 <li>
 <p>Aunque la gestión del cambio ha sido constante durante todo este tiempo, últimamente hemos observado una variación en la tendencia. Si antes los usuarios eran reticentes a los cambios, ahora los hay que nos piden directamente que les actualicemos a Linux porque han observado que va más rápido (la edad media de nuestros equipos es de 5/6 años) y da menos problemas.</p>
