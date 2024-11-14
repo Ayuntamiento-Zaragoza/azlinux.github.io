@@ -6,8 +6,8 @@
     <link>https://azlinux.github.io/azlinux.github.io/</link>
     <description>Distribución Linux del Ayuntamiento de Zaragoza para los empleados municipales</description>
     <language>es-ES</language>
-    <pubDate>Thu, 20 Jul 2023 09:44:53 GMT</pubDate>
-    <lastBuildDate>Thu, 20 Jul 2023 09:44:53 GMT</lastBuildDate>
+    <pubDate>Thu, 14 Nov 2024 08:38:30 GMT</pubDate>
+    <lastBuildDate>Thu, 14 Nov 2024 08:38:30 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Presentación</category>
@@ -731,7 +731,7 @@
       <category>Presentación</category>
       <category>Evento</category>
       <pubDate>Wed, 19 May 2010 08:23:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>El pasado día 7 de mayo, tuvimos la oportunidad de presentar <a href="/files/gnome-marketing-hackfest_2010-05-07.zip" target="_blank" rel="noopener noreferrer">nuestro proyecto de migración a software libre</a>, dentro del <a href="https://wiki.gnome.org/Hackfests/Marketing-2010-05" target="_blank" rel="noopener noreferrer">Gnome 3.0 Marketing Hackfest</a>.</p>
+      <content:encoded><![CDATA[<p>El pasado día 7 de mayo, tuvimos la oportunidad de presentar <a href="/files/gnome-marketing-hackfest_2010-05-07.zip" target="_blank" rel="noopener noreferrer">nuestro proyecto de migración a software libre</a>, dentro del <a href="https://wiki.gnome.org/Hackfests(2f)Marketing(2d)2010(2d)05.html" target="_blank" rel="noopener noreferrer">Gnome 3.0 Marketing Hackfest</a>.</p>
 <!-- more -->
 <p>Dicho evento se celebró en el <a href="http://www.ita.es/" target="_blank" rel="noopener noreferrer">Instituto Tecnológico de Aragón</a>. Entre los patrocinadores de las jornadas se encontraba el propio <a href="http://www.zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a>, además de <a href="https://es.wikipedia.org/wiki/Asolif" target="_blank" rel="noopener noreferrer">ASOLIF</a>, <strong>CESLA</strong> y el <strong>ITA</strong>, y fue un placer conocer a personas tan importantes dentro del entorno <a href="https://foundation.gnome.org/" target="_blank" rel="noopener noreferrer">Gnome</a> como <a href="https://www.vuntz.net/" target="_blank" rel="noopener noreferrer">Vincent Untz</a> y <a href="http://stormyscorner.com/" target="_blank" rel="noopener noreferrer">Stormy Peters</a>.</p>
 ]]></content:encoded>

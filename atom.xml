@@ -3,7 +3,7 @@
   <id>https://azlinux.github.io/azlinux.github.io/</id>
   <title>AZLinux</title>
   <subtitle>Distribución Linux del Ayuntamiento de Zaragoza para los empleados municipales</subtitle>
-  <updated>2023-07-20T09:44:53.010Z</updated>
+  <updated>2024-11-14T08:38:30.643Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://azlinux.github.io/azlinux.github.io/atom.xml"/>
   <link rel="alternate" href="https://azlinux.github.io/azlinux.github.io/"/>
@@ -923,10 +923,10 @@
     <title type="text">Ponencia en el Gnome 3.0 Marketing Hackfest</title>
     <id>https://azlinux.github.io/azlinux.github.io/posts/2010-05-19-ponencia-gnome-marketing-hackfest.html</id>
     <link href="https://azlinux.github.io/azlinux.github.io/posts/2010-05-19-ponencia-gnome-marketing-hackfest.html"/>
-    <updated>2023-07-18T12:46:27.000Z</updated>
-    <summary type="html"><![CDATA[<p>El pasado día 7 de mayo, tuvimos la oportunidad de presentar <a href="/files/gnome-marketing-hackfest_2010-05-07.zip" target="_blank" rel="noopener noreferrer">nuestro proyecto de migración a software libre</a>, dentro del <a href="https://wiki.gnome.org/Hackfests/Marketing-2010-05" target="_blank" rel="noopener noreferrer">Gnome 3.0 Marketing Hackfest</a>.</p>
+    <updated>2024-11-14T08:37:30.000Z</updated>
+    <summary type="html"><![CDATA[<p>El pasado día 7 de mayo, tuvimos la oportunidad de presentar <a href="/files/gnome-marketing-hackfest_2010-05-07.zip" target="_blank" rel="noopener noreferrer">nuestro proyecto de migración a software libre</a>, dentro del <a href="https://wiki.gnome.org/Hackfests(2f)Marketing(2d)2010(2d)05.html" target="_blank" rel="noopener noreferrer">Gnome 3.0 Marketing Hackfest</a>.</p>
 ]]></summary>
-    <content type="html"><![CDATA[<p>El pasado día 7 de mayo, tuvimos la oportunidad de presentar <a href="/files/gnome-marketing-hackfest_2010-05-07.zip" target="_blank" rel="noopener noreferrer">nuestro proyecto de migración a software libre</a>, dentro del <a href="https://wiki.gnome.org/Hackfests/Marketing-2010-05" target="_blank" rel="noopener noreferrer">Gnome 3.0 Marketing Hackfest</a>.</p>
+    <content type="html"><![CDATA[<p>El pasado día 7 de mayo, tuvimos la oportunidad de presentar <a href="/files/gnome-marketing-hackfest_2010-05-07.zip" target="_blank" rel="noopener noreferrer">nuestro proyecto de migración a software libre</a>, dentro del <a href="https://wiki.gnome.org/Hackfests(2f)Marketing(2d)2010(2d)05.html" target="_blank" rel="noopener noreferrer">Gnome 3.0 Marketing Hackfest</a>.</p>
 <!-- more -->
 <p>Dicho evento se celebró en el <a href="http://www.ita.es/" target="_blank" rel="noopener noreferrer">Instituto Tecnológico de Aragón</a>. Entre los patrocinadores de las jornadas se encontraba el propio <a href="http://www.zaragoza.es/" target="_blank" rel="noopener noreferrer">Ayuntamiento de Zaragoza</a>, además de <a href="https://es.wikipedia.org/wiki/Asolif" target="_blank" rel="noopener noreferrer">ASOLIF</a>, <strong>CESLA</strong> y el <strong>ITA</strong>, y fue un placer conocer a personas tan importantes dentro del entorno <a href="https://foundation.gnome.org/" target="_blank" rel="noopener noreferrer">Gnome</a> como <a href="https://www.vuntz.net/" target="_blank" rel="noopener noreferrer">Vincent Untz</a> y <a href="http://stormyscorner.com/" target="_blank" rel="noopener noreferrer">Stormy Peters</a>.</p>
 ]]></content>
