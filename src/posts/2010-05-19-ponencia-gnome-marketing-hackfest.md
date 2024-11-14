@@ -8,7 +8,7 @@ category:
   - Evento
 ---
 
-El pasado día 7 de mayo, tuvimos la oportunidad de presentar [nuestro proyecto de migración a software libre](/files/gnome-marketing-hackfest_2010-05-07.zip), dentro del [Gnome 3.0 Marketing Hackfest](https://wiki.gnome.org/Hackfests/Marketing-2010-05).
+El pasado día 7 de mayo, tuvimos la oportunidad de presentar [nuestro proyecto de migración a software libre](/files/gnome-marketing-hackfest_2010-05-07.zip), dentro del [Gnome 3.0 Marketing Hackfest](<https://wiki.gnome.org/Hackfests(2f)Marketing(2d)2010(2d)05.html>).
 
 <!-- more -->
 
